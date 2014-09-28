@@ -17,8 +17,4 @@ public class BasicBullet : MonoBehaviour
 		{
 				gameObject.transform.Translate (Vector3.up * speed * Time.deltaTime);
 		}
-
-		void OnCollisionEnter2D (Collision2D coll)
-		{
-		}
 }
