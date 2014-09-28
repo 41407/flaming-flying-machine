@@ -15,6 +15,11 @@ public class UserInputMovement : MonoBehaviour
 		private float xMovement;
 		private float yMovement;
 
+		void Start ()
+		{
+				Screen.showCursor = false;
+		}
+
 		void Update ()
 		{
 				Vector2 movementVector;
