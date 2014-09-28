@@ -46,17 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
      <Compile Include="Assets\EnemyDestruction.cs" />
-     <Compile Include="Assets\Scripts\BasicBullet.cs" />
-     <Compile Include="Assets\Scripts\BasicEnemyMovement.cs" />
-=======
      <Compile Include="Assets\LevelScript.cs" />
      <Compile Include="Assets\PendulumMovement.cs" />
->>>>>>> e3387b807f63031333c3ba370271d9b7626d22d3
+     <Compile Include="Assets\PlayerFiring.cs" />
+     <Compile Include="Assets\Scripts\BasicBullet.cs" />
+     <Compile Include="Assets\Scripts\BasicEnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
      <Compile Include="Assets\Scripts\Input\UserInputMovement.cs" />
+     <Compile Include="Assets\Scripts\LevelScript.cs" />
      <Compile Include="Assets\Scripts\LookAtObject.cs" />
+     <Compile Include="Assets\Scripts\PlayerFiring.cs" />
+     <Compile Include="Assets\Scripts\PlayerLogic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
