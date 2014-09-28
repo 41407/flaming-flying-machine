@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EnemyDestruction.cs" />
      <Compile Include="Assets\Scripts\BasicBullet.cs" />
      <Compile Include="Assets\Scripts\BasicEnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
