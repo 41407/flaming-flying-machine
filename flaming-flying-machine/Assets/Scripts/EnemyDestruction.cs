@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyDestruction : MonoBehaviour
 {
 		public int health;
+		public bool destroysBulletsOnImpact;
 
 		void Update ()
 		{
@@ -15,10 +16,11 @@ public class EnemyDestruction : MonoBehaviour
 		void OnCollisionEnter2D (Collision2D coll)
 		{
 				if (coll.gameObject.tag == "PlayerBullet") {
-						print ("Muhun oisui!!!!!!");
 						BulletProperties p = (BulletProperties)coll.gameObject.GetComponent ("BulletProperties");
-			health -= p.damage;
-
+						health -= p.damage;
+						if (destroysBulletsOnImpact) { 
+								Destroy (coll.gameObject);
+						}
 				}
 		}
 }

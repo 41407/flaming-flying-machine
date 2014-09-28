@@ -46,15 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BulletProperties.cs" />
-     <Compile Include="Assets\EnemyDestruction.cs" />
-     <Compile Include="Assets\PendulumMovement.cs" />
-     <Compile Include="Assets\Scripts\BasicBullet.cs" />
      <Compile Include="Assets\Scripts\BasicEnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BasicBullet.cs" />
+     <Compile Include="Assets\Scripts\Bullet\BulletProperties.cs" />
+     <Compile Include="Assets\Scripts\EnemyDestruction.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
      <Compile Include="Assets\Scripts\Input\UserInputMovement.cs" />
      <Compile Include="Assets\Scripts\LevelScript.cs" />
      <Compile Include="Assets\Scripts\LookAtObject.cs" />
+     <Compile Include="Assets\Scripts\PendulumMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerFiring.cs" />
      <Compile Include="Assets\Scripts\PlayerLogic.cs" />
   </ItemGroup>
