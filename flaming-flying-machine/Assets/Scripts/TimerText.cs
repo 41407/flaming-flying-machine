@@ -21,7 +21,6 @@ public class TimerText : MonoBehaviour {
 		if (timeBetweenTicks >= tick) {
 			beatTimer += 0.0625f;		
 			timeBetweenTicks -= tick;
-			audio.Play();
 		}
 
 		guiText.text = ("Sec: " + timer.ToString() + "\nBeat: " + beatTimer.ToString());

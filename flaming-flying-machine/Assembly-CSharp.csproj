@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\PlayerLogic.cs" />
      <Compile Include="Assets\Scripts\TimerText.cs" />
      <Compile Include="Assets\Shake.cs" />
+     <Compile Include="Assets\Sound.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

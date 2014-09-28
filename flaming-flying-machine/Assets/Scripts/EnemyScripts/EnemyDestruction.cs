@@ -3,12 +3,14 @@ using System.Collections;
 
 public class EnemyDestruction : MonoBehaviour
 {
+		public GameObject explosion;
 		public int health;
 		public bool destroysBulletsOnImpact;
 
 		void Update ()
 		{
 				if (health <= 0) {	
+						Destroy (Instantiate (explosion, gameObject.transform.position, Quaternion.identity), 0.1f);
 						Destroy (gameObject);
 				}
 		}

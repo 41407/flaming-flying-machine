@@ -30,6 +30,7 @@ public class PlayerFiring : MonoBehaviour
 						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 						newBullet.GetComponent<BulletProperties> ().speed = speed;
 						newBullet.GetComponent<BulletProperties> ().direction = Vector3.up;
+						Destroy (newBullet, 1.0f);
 				}
 				firingCooldown += Time.deltaTime;
 		}
