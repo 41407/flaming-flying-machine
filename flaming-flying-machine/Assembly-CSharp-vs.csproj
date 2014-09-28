@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\LevelScript.cs" />
+     <Compile Include="Assets\PendulumMovement.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
      <Compile Include="Assets\Scripts\Input\UserInputMovement.cs" />
      <Compile Include="Assets\Scripts\LookAtObject.cs" />
