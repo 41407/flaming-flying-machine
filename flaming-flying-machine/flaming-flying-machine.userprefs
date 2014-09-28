@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LookAtObject.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UserInputMovement.cs">
     <Files>
-      <File FileName="Assets/Scripts/LookAtObject.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/LookAtObject.cs" Line="7" Column="2" />
+      <File FileName="Assets/UserInputMovement.cs" Line="12" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
