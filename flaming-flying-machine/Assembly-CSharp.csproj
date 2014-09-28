@@ -46,13 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BasicBullet.cs" />
-     <Compile Include="Assets\PlayerFiring.cs" />
+     <Compile Include="Assets\Scripts\BasicBullet.cs" />
      <Compile Include="Assets\Scripts\BasicEnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
      <Compile Include="Assets\Scripts\Input\UserInputMovement.cs" />
      <Compile Include="Assets\Scripts\LevelScript.cs" />
      <Compile Include="Assets\Scripts\LookAtObject.cs" />
+     <Compile Include="Assets\Scripts\PlayerFiring.cs" />
      <Compile Include="Assets\Scripts\PlayerLogic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
