@@ -9,16 +9,15 @@ public class LevelScript : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				Screen.fullScreen = true;
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				if (Time.frameCount % 10 == 0) {
-						GameObject e = (GameObject)Instantiate (enemy, new Vector3 (Random.Range (-40, 40), 10, 0), new Quaternion ());
-						EnemyShooting es = e.GetComponent<EnemyShooting> ();
-						es.player = player;
-				}
+			//	if (Time.frameCount % 10 == 0) {
+			//			GameObject e = (GameObject)Instantiate (enemy, new Vector3 (Random.Range (-40, 40), 10, 0), new Quaternion ());
+		//				EnemyShooting es = e.GetComponent<EnemyShooting> ();
+		///				es.player = player;
+		//		}
 		}
 }
