@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BackgroundGenerator.cs" />
+     <Compile Include="Assets\BackgroundMovement.cs" />
      <Compile Include="Assets\CameraShake.cs" />
      <Compile Include="Assets\CreateRotatorChilds.cs" />
      <Compile Include="Assets\OrbitAroundParent.cs" />
