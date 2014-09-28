@@ -3,11 +3,11 @@ using System.Collections;
 
 public class ObjectFollowsMouse : MonoBehaviour {
 
-	public Camera camera;
+	public Camera cameraToUse;
 
 	void Update () {
 		Vector3 mouseScreenPosition = Input.mousePosition;
-		Vector3 mouseWorldPosition = camera.ScreenToWorldPoint (mouseScreenPosition);	
+		Vector3 mouseWorldPosition = cameraToUse.ScreenToWorldPoint (mouseScreenPosition);	
 		mouseWorldPosition.z = 0;
 		gameObject.transform.position = mouseWorldPosition;
 	}
