@@ -22,6 +22,7 @@ public class EnemyShooting : MonoBehaviour
 						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, new Quaternion ());
 						Angle a = (Angle)newBullet.GetComponent ("Angle");
 						a.setAngle (gameObject.transform.position - player.transform.position);
+						print (player.transform.position);
 				}
 				firingCooldown += Time.deltaTime;
 		}

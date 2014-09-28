@@ -16,10 +16,9 @@ public class PlayerLogic : MonoBehaviour
 	
 		}
 
-		void OnCollisionEnter2D (Collision2D coll)
+		void OnTriggerEnter2D (Collider2D coll)
 		{
-				GameObject collidedWith = coll.gameObject;
-				if (collidedWith.tag == "Enemy" || collidedWith.tag == "EnemyBullet") {
+				if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyBullet") {
 						Destroy (gameObject);		
 				}
 		}
