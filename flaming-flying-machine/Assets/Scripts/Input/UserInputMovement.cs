@@ -6,7 +6,6 @@ public class UserInputMovement : MonoBehaviour
 		// Object that will be moved by this script
 		public GameObject objectToControl;
 		public GameObject objectToFollow;
-		public float followDeadzone;
 		public bool keyboardInput;
 		
 		// In units/s
