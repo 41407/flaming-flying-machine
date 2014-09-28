@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyDestruction : MonoBehaviour {
+public class EnemyDestruction : MonoBehaviour
+{
+		public int health;
 
-	// Use this for initialization
-	void Start () {
+		void Update ()
+		{
+				if (health <= 0) {	
+						Destroy (gameObject);
+				}
+		}
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+		void OnCollisionEnter2D (Collision2D coll)
+		{
+				if (coll.gameObject.tag == "PlayerBullet") {
+						print ("Muhun oisui!!!!!!");
+						BulletProperties p = (BulletProperties)coll.gameObject.GetComponent ("BulletProperties");
+			health -= p.damage;
+
+				}
+		}
 }
