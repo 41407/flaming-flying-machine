@@ -6,12 +6,13 @@ public class PlayerFiring : MonoBehaviour
 
 		public GameObject bullet;
 		public float firingDelay;
+		public float speed;
 		private bool firing = false;
 		private float firingCooldown = 0;
 		// Use this for initialization
 		void Start ()
 		{
-		firingDelay /= 1000;
+				firingDelay /= 1000;
 		}
 	
 		// Update is called once per frame
@@ -27,6 +28,7 @@ public class PlayerFiring : MonoBehaviour
 						firingCooldown = 0;
 						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, new Quaternion ());
 						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
+						newBullet.GetComponent<BasicBullet> ().speed = speed;
 				}
 				firingCooldown += Time.deltaTime;
 		}
