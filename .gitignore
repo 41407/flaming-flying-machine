@@ -16,6 +16,8 @@
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+*.sln
+
 .DS_Store
 .DS_Store?
 ._*
