@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LookAtTest : MonoBehaviour
+public class LookAtObject : MonoBehaviour
 {
 		public GameObject objectToLookAt;
 
