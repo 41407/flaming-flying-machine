@@ -26,7 +26,7 @@ public class PlayerFiring : MonoBehaviour
 				}
 				if (firing && firingCooldown >= firingDelay) {
 						firingCooldown = 0;
-						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, new Quaternion ());
+						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, Quaternion.identity);
 						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 						newBullet.GetComponent<BasicBullet> ().speed = speed;
 				}

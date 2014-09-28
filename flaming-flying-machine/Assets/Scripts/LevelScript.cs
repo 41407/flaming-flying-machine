@@ -66,17 +66,18 @@ public class LevelScript : MonoBehaviour
 
 		void SpawnEnemy ()
 		{
-				if (((int)spawnSequence.Peek () * tick)/1000f <= timer) {
-						spawnSequence.Dequeue ();
-						int enemyType = (int)spawnSequence.Dequeue () % enemies.Length;
-						int randomXMin = (int)spawnSequence.Dequeue ();
-						int randomXMax = (int)spawnSequence.Dequeue ();
+				if (spawnSequence.Count > 0) {
+						if (((int)spawnSequence.Peek () * tick) / 1000f <= timer) {
+								spawnSequence.Dequeue ();
+								int enemyType = (int)spawnSequence.Dequeue () % enemies.Length;
+								int randomXMin = (int)spawnSequence.Dequeue ();
+								int randomXMax = (int)spawnSequence.Dequeue ();
 
-						Vector3 spawnPosition = new Vector3 (Random.Range (randomXMin, randomXMax), 16f, 0f);
-						GameObject newEnemy = (GameObject)Instantiate (enemies [enemyType], spawnPosition, Quaternion.identity);
-						newEnemy.GetComponent<EnemyShooting>().player = player;
+								Vector3 spawnPosition = new Vector3 (Random.Range (randomXMin, randomXMax), 16f, 0f);
+								GameObject newEnemy = (GameObject)Instantiate (enemies [enemyType], spawnPosition, Quaternion.identity);
+								newEnemy.GetComponent<EnemyShooting> ().player = player;
+						}
 				}
-
 		}
 
 		// Update is called once per frame

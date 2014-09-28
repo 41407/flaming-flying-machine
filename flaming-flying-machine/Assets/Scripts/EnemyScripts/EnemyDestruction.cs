@@ -16,8 +16,7 @@ public class EnemyDestruction : MonoBehaviour
 		void OnTriggerEnter2D (Collider2D coll)
 		{
 				if (coll.gameObject.tag == "PlayerBullet") {
-						BulletProperties p = (BulletProperties)coll.gameObject.GetComponent ("BulletProperties");
-						health -= p.damage;
+						health -= coll.gameObject.GetComponent<BulletProperties> ().damage;
 						if (destroysBulletsOnImpact) { 
 								Destroy (coll.gameObject);
 						}
