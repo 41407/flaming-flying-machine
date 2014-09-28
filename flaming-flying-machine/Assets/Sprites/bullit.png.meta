@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: cddcc79ebaf1d6c4eb011dfdb0c3e2ae
+guid: b6d234151c0f040d4b6dec385311e5d8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BallEnemy
+    21300000: bullit
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
