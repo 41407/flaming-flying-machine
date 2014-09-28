@@ -20,7 +20,6 @@ public class LevelScript : MonoBehaviour
 				string line;
 				// Create a new StreamReader, tell it which file to read and what encoding the file
 				// was saved as
-				print (Application.dataPath);
 				StreamReader theReader = new StreamReader (Application.dataPath + "/Levels/1.txt", Encoding.Default);
 			
 				// Immediately clean up the reader after this block of code is done.
