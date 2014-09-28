@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraShake.cs" />
      <Compile Include="Assets\CreateRotatorChilds.cs" />
      <Compile Include="Assets\OrbitAroundParent.cs" />
      <Compile Include="Assets\Rotate.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\PlayerFiring.cs" />
      <Compile Include="Assets\Scripts\PlayerLogic.cs" />
      <Compile Include="Assets\Scripts\TimerText.cs" />
+     <Compile Include="Assets\Shake.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

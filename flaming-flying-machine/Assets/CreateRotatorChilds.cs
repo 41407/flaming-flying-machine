@@ -8,7 +8,6 @@ public class CreateRotatorChilds : MonoBehaviour
 		public GameObject rotatorChild;
 		private ArrayList childs;
 		private int aliveChilds;
-		private int aliveAndKicking;
 		
 		// Use this for initialization
 		void Start ()
@@ -20,20 +19,19 @@ public class CreateRotatorChilds : MonoBehaviour
 						child.GetComponent<OrbitAroundParent> ().parent = gameObject;
 						child.GetComponent<EnemyShooting> ().player = player;
 						childs.Add (child);
-						aliveChilds = i;
 				}
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				aliveAndKicking = 0;
+				aliveChilds = 0;
 				foreach (GameObject child in childs) {
 						if (child.gameObject) {
-								aliveAndKicking++;
+								aliveChilds++;
 						}
 				}
-				if (aliveAndKicking < 1) {
+				if (aliveChilds < 1) {
 						// delay for slight epicness
 						Destroy (this.gameObject, 0.1f);
 				}

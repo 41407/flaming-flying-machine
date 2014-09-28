@@ -7,7 +7,8 @@ public class LevelScript : MonoBehaviour
 {
 		public GameObject[] enemies;
 		public GameObject player;
-		private const float tick = 117.1875f;
+		public Camera levelCamera;
+		private const float tick = 2 * 117.1875f;
 		private Queue spawnSequence;
 		private float timer;
 	
@@ -36,11 +37,13 @@ public class LevelScript : MonoBehaviour
 										// Do whatever you need to do with the text line, it's a string now
 										// In this example, I split it into arguments based on comma
 										// deliniators, then send that array to DoStuff()
-										string[] entries = line.Split (':');
-										if (entries.Length > 0)
-												for (int i = 0; i < entries.Length; i++) {
-														spawnSequence.Enqueue (int.Parse (entries [i]));
-												}
+										if (!line.StartsWith ("//")) {
+												string[] entries = line.Split (' ');
+												if (entries.Length > 0)
+														for (int i = 0; i < entries.Length; i++) {
+																spawnSequence.Enqueue (int.Parse (entries [i]));
+														}
+										}
 								}
 						} while (line != null);
 				
