@@ -15,7 +15,7 @@ public class LevelScript : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				if (Time.frameCount % 100 == 0) {
+				if (Time.frameCount % 10 == 0) {
 						Instantiate (enemy, new Vector3 (Random.Range (-40, 40), 10, 0), new Quaternion ());		
 				}
 		}

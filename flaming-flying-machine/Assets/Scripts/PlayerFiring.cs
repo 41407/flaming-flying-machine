@@ -27,7 +27,7 @@ public class PlayerFiring : MonoBehaviour
 				if (firing && firingCooldown >= rateOfFire) {
 						firingCooldown = 0;
 						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, new Quaternion ());
-			Physics2D.IgnoreCollision(newBullet.collider2D, gameObject.collider2D);
+						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 				}
 		}
 }
