@@ -67,7 +67,7 @@ public class LevelScript : MonoBehaviour
 		void SpawnEnemy ()
 		{
 				if (((int)spawnSequence.Peek () * tick)/1000f <= timer) {
-						int time = (int)spawnSequence.Dequeue ();
+						spawnSequence.Dequeue ();
 						int enemyType = (int)spawnSequence.Dequeue () % enemies.Length;
 						int randomXMin = (int)spawnSequence.Dequeue ();
 						int randomXMax = (int)spawnSequence.Dequeue ();

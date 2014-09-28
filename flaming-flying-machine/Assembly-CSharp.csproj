@@ -46,12 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Angle.cs" />
-     <Compile Include="Assets\EnemyShooting.cs" />
-     <Compile Include="Assets\Scripts\BasicEnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Bullet\BasicBullet.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletProperties.cs" />
-     <Compile Include="Assets\Scripts\EnemyDestruction.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\BasicEnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyDestruction.cs" />
+     <Compile Include="Assets\Scripts\EnemyScripts\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
      <Compile Include="Assets\Scripts\Input\UserInputMovement.cs" />
      <Compile Include="Assets\Scripts\LevelScript.cs" />
@@ -59,7 +59,7 @@
      <Compile Include="Assets\Scripts\PendulumMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerFiring.cs" />
      <Compile Include="Assets\Scripts\PlayerLogic.cs" />
-     <Compile Include="Assets\TimerText.cs" />
+     <Compile Include="Assets\Scripts\TimerText.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
