@@ -3,14 +3,13 @@
 *.csproj
 *.pidb
 *.unityproj
-.DS_Store
-/flaming-flying-machine/Library/FailedAssetImports.txt
-/flaming-flying-machine/Library/cache/
-/flaming-flying-machine/Library/metadata/
-/flaming-flying-machine/Library/previews/
-/flaming-flying-machine/Library/ScriptAssemblies
-/flaming-flying-machine/obj
-/flaming-flying-machine/Temp
+flaming-flying-machine/Library/FailedAssetImports.txt
+flaming-flying-machine/Library/cache/
+flaming-flying-machine/Library/metadata/
+flaming-flying-machine/Library/previews/
+flaming-flying-machine/Library/ScriptAssemblies
+flaming-flying-machine/obj
+flaming-flying-machine/Temp
 
 #Unity3D Generated File On Crash Reports
 flaming-flying-machine/sysinfo.txt

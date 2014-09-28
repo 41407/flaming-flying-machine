@@ -28,7 +28,8 @@ public class PlayerFiring : MonoBehaviour
 						firingCooldown = 0;
 						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, Quaternion.identity);
 						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
-						newBullet.GetComponent<BasicBullet> ().speed = speed;
+						newBullet.GetComponent<BulletProperties> ().speed = speed;
+						newBullet.GetComponent<BulletProperties> ().direction = Vector3.up;
 				}
 				firingCooldown += Time.deltaTime;
 		}
