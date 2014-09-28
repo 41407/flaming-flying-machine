@@ -75,6 +75,9 @@ public class LevelScript : MonoBehaviour
 								Vector3 spawnPosition = new Vector3 (Random.Range (randomXMin, randomXMax), 16f, 0f);
 								GameObject newEnemy = (GameObject)Instantiate (enemies [enemyType], spawnPosition, Quaternion.identity);
 								newEnemy.GetComponent<EnemyShooting> ().player = player;
+								if (newEnemy.GetComponent<CreateRotatorChilds> ()) {
+										newEnemy.GetComponent<CreateRotatorChilds> ().player = player;
+								}
 						}
 				}
 		}
