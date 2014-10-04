@@ -6,8 +6,8 @@ public class SpawnEnemy : MonoBehaviour
 
 		public GameObject enemyType;
 		public float xCooridnate;
-		public float bar;
-		public float beat;
+		public float bar = 1;
+		public float beat = 1;
 		private float ms;
 		private GameObject player;
 
@@ -22,6 +22,7 @@ public class SpawnEnemy : MonoBehaviour
 				if (gameObject.GetComponent<Metronome> ().bar == bar && 
 						gameObject.GetComponent<Metronome> ().beat == beat) {
 						Spawn ();
+						Destroy (this);
 				}
 		}
 

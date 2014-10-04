@@ -22,7 +22,6 @@ public class Metronome : MonoBehaviour
 		void Update ()
 		{
 				time += Time.deltaTime;
-		print ("time: " + time + " beat duration: " + tick);
 				if (time >= tick) {
 						time -= tick;	
 						beat++;
