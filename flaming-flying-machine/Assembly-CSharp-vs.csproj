@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Angle.cs" />
+     <Compile Include="Assets\Scripts\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundGenerator.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundMovement.cs" />
      <Compile Include="Assets\Scripts\Bullet\BasicBullet.cs" />
