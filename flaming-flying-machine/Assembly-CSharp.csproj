@@ -46,11 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AlphaRamp.cs" />
      <Compile Include="Assets\BackgroundGenerator.cs" />
      <Compile Include="Assets\BackgroundMovement.cs" />
      <Compile Include="Assets\CameraShake.cs" />
      <Compile Include="Assets\CreateRotatorChilds.cs" />
      <Compile Include="Assets\OrbitAroundParent.cs" />
+     <Compile Include="Assets\ParitcleLookAt.cs" />
+     <Compile Include="Assets\PlayerTrail.cs" />
      <Compile Include="Assets\Rotate.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Bullet\BasicBullet.cs" />
