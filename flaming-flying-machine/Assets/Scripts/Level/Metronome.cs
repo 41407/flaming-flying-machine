@@ -25,7 +25,6 @@ public class Metronome : MonoBehaviour
 				if (time >= tick) {
 						time -= tick;	
 						beat++;
-						gameObject.audio.Play ();
 				}
 				
 				if (beat == 5) {

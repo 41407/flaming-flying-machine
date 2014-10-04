@@ -51,7 +51,6 @@
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundGenerator.cs" />
-     <Compile Include="Assets\Scripts\Background\BackgroundMovement.cs" />
      <Compile Include="Assets\Scripts\Bullet\BasicBullet.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletProperties.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletSpawner.cs" />
@@ -83,6 +82,8 @@
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\TimerText.cs" />
+     <Compile Include="Assets\Squareback.cs" />
+     <Compile Include="Assets\SquarebackRandomizations.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
