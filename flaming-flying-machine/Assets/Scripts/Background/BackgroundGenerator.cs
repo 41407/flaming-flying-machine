@@ -19,7 +19,6 @@ public class BackgroundGenerator : MonoBehaviour
 		{
 				if (Time.frameCount % 20 == 0) {
 						int random = (int)Mathf.Pow (-1, Random.Range (0, 2));
-						print (random);
 						random *= 30;
 						random += Random.Range (-5, 5);
 						Vector3 pos = new Vector3 (random, 11, 2);
