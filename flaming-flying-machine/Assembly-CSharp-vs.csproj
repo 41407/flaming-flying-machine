@@ -51,6 +51,7 @@
      <Compile Include="Assets\BackgroundMovement.cs" />
      <Compile Include="Assets\CameraShake.cs" />
      <Compile Include="Assets\CreateRotatorChilds.cs" />
+     <Compile Include="Assets\Metronome.cs" />
      <Compile Include="Assets\OrbitAroundParent.cs" />
      <Compile Include="Assets\ParitcleLookAt.cs" />
      <Compile Include="Assets\PlayerTrail.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Scripts\TimerText.cs" />
      <Compile Include="Assets\Shake.cs" />
      <Compile Include="Assets\Sound.cs" />
+     <Compile Include="Assets\SpawnEnemy.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
