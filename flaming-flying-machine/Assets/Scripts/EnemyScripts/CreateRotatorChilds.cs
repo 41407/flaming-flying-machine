@@ -6,6 +6,7 @@ public class CreateRotatorChilds : MonoBehaviour
 
 		public GameObject player;
 		public GameObject rotatorChild;
+		public float orbitDistance;
 		private ArrayList childs;
 		private int aliveChilds;
 		
@@ -16,6 +17,7 @@ public class CreateRotatorChilds : MonoBehaviour
 				for (int i = 1; i < 4; i++) {
 						GameObject child = (GameObject)Instantiate (rotatorChild, gameObject.transform.position, Quaternion.identity);
 						child.GetComponent<OrbitAroundParent> ().index = i;
+						child.GetComponent<OrbitAroundParent> ().radius = orbitDistance;
 						child.GetComponent<OrbitAroundParent> ().parent = gameObject;
 						child.GetComponent<EnemyShooting> ().player = player;
 						childs.Add (child);

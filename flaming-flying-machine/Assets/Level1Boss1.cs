@@ -4,7 +4,6 @@ using System.Collections;
 public class Level1Boss1 : MonoBehaviour {
 
 	public Vector2 snapPosition;
-	public 
 
 	// Use this for initialization
 	void Start () {
