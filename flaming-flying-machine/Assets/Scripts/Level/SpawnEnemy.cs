@@ -19,8 +19,8 @@ public class SpawnEnemy : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				if (gameObject.GetComponent<Metronome> ().bar == bar && 
-						gameObject.GetComponent<Metronome> ().beat == beat) {
+				if (Metronome.bar == bar && 
+						Metronome.beat == beat) {
 						Spawn ();
 						Destroy (this);
 				}
@@ -28,7 +28,7 @@ public class SpawnEnemy : MonoBehaviour
 
 		void Spawn ()
 		{
-				Vector3 spawnPosition = new Vector3 (Random.Range (xCooridnate, xCooridnate), 16f, 0f);
+				Vector3 spawnPosition = new Vector3 (Random.Range (xCooridnate, xCooridnate), 0f, 0f);
 				GameObject newEnemy = (GameObject)Instantiate (enemyType, spawnPosition, Quaternion.identity);
 				newEnemy.GetComponent<EnemyShooting> ().player = player;
 				if (newEnemy.GetComponent<CreateRotatorChilds> ()) {

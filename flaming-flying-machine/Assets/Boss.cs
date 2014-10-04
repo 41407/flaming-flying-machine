@@ -1,25 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Boss : MonoBehaviour {
+public class Boss : MonoBehaviour
+{
 
-	public Component[] stages;
+		public Component[] stages;
+		public int loopLengthInBar;
+		private int currentStage = 0;
+		private bool switchStage = true;
 
-	// Use this for initialization
-	void Start () {
-	}
+		// Use this for initialization
+		void Start ()
+		{
+		}
 	
-	// Update is called once per frame
-	void Update () {
-		if(Time.frameCount % 120 == 0) {
-			MonoBehaviour curr = (MonoBehaviour)stages[0];
-			curr.enabled = true;
+		// Update is called once per frame
+		void Update ()
+		{
+				if (switchStage) {	
+						DisableAll ();
+						((MonoBehaviour)stages [currentStage]).enabled = true;
+						currentStage++;
+						if (currentStage > stages.Length) {
+								currentStage = 0;
+						}
+						switchStage = false;
+				}
+
 		}
-		if(Time.frameCount % 240 == 0) {
-			MonoBehaviour curr = (MonoBehaviour)stages[0];
-			curr.enabled = false;
-			curr = (MonoBehaviour)stages[1];
-			curr.enabled = true;
+
+		void DisableAll ()
+		{
+				for (int i = 0; i < stages.Length; i++) {
+						((MonoBehaviour)stages [i]).enabled = false;
+				}
 		}
-	}
 }

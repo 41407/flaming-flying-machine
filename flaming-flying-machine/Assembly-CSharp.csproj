@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Boss.cs" />
      <Compile Include="Assets\CavemanTest.cs" />
+     <Compile Include="Assets\Level1Boss1.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundGenerator.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundMovement.cs" />

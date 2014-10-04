@@ -4,8 +4,8 @@ using System.Collections;
 public class Metronome : MonoBehaviour
 {
 
-		public int bar;
-		public float beat;
+		static public int bar;
+		static public float beat;
 		public float tempo;
 		private float tick;
 		private float time;

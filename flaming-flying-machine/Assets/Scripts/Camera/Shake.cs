@@ -5,6 +5,8 @@ public class Shake : MonoBehaviour
 {
 		public float shakeFactor;
 		public float shake;
+		public float x;
+		public float y;
 
 		// Use this for initialization
 		void Start ()
@@ -21,7 +23,7 @@ public class Shake : MonoBehaviour
 		void Update ()
 		{
 				this.shake *= shakeFactor;
-				Vector3 shaky = new Vector3 (Random.value * shake, Random.value * shake, gameObject.transform.position.z);
+				Vector3 shaky = new Vector3 (x + Random.value * shake, y + Random.value * shake, gameObject.transform.position.z);
 				gameObject.transform.position = shaky;
 		}
 }
