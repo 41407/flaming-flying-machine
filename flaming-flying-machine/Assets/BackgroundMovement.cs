@@ -13,6 +13,7 @@ public class BackgroundMovement : MonoBehaviour
 				rotationSpeed *= Random.value;
 				scale *= Random.value;
 				gameObject.transform.localScale = new Vector3 (scale, scale, 0);
+				gameObject.transform.position = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y + scale * 10, 0);
 		}
 
 		void Update ()
