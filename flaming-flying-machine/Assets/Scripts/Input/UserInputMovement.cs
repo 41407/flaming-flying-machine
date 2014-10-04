@@ -25,16 +25,16 @@ public class UserInputMovement : MonoBehaviour
 				Vector2 movementVector;
 				if (keyboardInput) {
 						movementVector = new Vector2 (Input.GetAxisRaw ("Horizontal"), Input.GetAxisRaw ("Vertical"));
-		
-
 				} else {
 						Vector2 distanceBetween = objectToFollow.transform.position - objectToControl.transform.position;
+						gameObject.GetComponent<PlayerAudio> ().speed = distanceBetween.magnitude;
 						if (distanceBetween.magnitude > 1) {				
 								movementVector = distanceBetween.normalized;
 						} else {
 								movementVector = distanceBetween;
 						}
 				}
+				
 				objectToControl.transform.Translate (movementVector * speed * Time.deltaTime * Time.timeScale);
 		}
 }

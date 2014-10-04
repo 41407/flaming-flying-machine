@@ -20,9 +20,11 @@ public class PlayerFiring : MonoBehaviour
 		{
 				if (Input.GetMouseButtonDown (0)) {
 						firing = true;
+						gameObject.GetComponent<PlayerAudio> ().firing = true;
 				} 
 				if (Input.GetMouseButtonUp (0)) {
 						firing = false;
+						gameObject.GetComponent<PlayerAudio> ().firing = false;
 				}
 				if (firing && firingCooldown >= firingDelay) {
 						firingCooldown = 0;
