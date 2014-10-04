@@ -31,7 +31,9 @@ public class SpawnEnemy : MonoBehaviour
 		{
 				Vector3 spawnPosition = new Vector3 (Random.Range (xCooridnate, xCooridnate), 0f, 0f);
 				GameObject newEnemy = (GameObject)Instantiate (enemyType, spawnPosition, Quaternion.identity);
-				newEnemy.GetComponent<EnemyShooting> ().player = player;
+				if (newEnemy.GetComponent<EnemyShooting> ()) {		
+						newEnemy.GetComponent<EnemyShooting> ().player = player;
+				}
 				if (newEnemy.GetComponent<CreateRotatorChilds> ()) {
 						newEnemy.GetComponent<CreateRotatorChilds> ().player = player;
 				}
