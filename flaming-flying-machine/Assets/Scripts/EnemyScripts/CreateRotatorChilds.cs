@@ -6,20 +6,22 @@ public class CreateRotatorChilds : MonoBehaviour
 
 		public GameObject player;
 		public GameObject rotatorChild;
-		public float orbitDistance;
 		private ArrayList childs;
 		private int aliveChilds;
+		public bool killIfChildsDie = true;
 		
 		// Use this for initialization
 		void Start ()
 		{
 				childs = new ArrayList ();
 				for (int i = 1; i < 4; i++) {
+						print ("HEI SPAWNAAS HEI ;D");
 						GameObject child = (GameObject)Instantiate (rotatorChild, gameObject.transform.position, Quaternion.identity);
 						child.GetComponent<OrbitAroundParent> ().index = i;
-						child.GetComponent<OrbitAroundParent> ().radius = orbitDistance;
 						child.GetComponent<OrbitAroundParent> ().parent = gameObject;
-						child.GetComponent<EnemyShooting> ().player = player;
+						if (child.GetComponent<EnemyShooting> ()) {
+								child.GetComponent<EnemyShooting> ().player = player;
+						}
 						childs.Add (child);
 				}
 		}
@@ -27,15 +29,17 @@ public class CreateRotatorChilds : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				aliveChilds = 0;
-				foreach (GameObject child in childs) {
-						if (child.gameObject) {
-								aliveChilds++;
+				if (killIfChildsDie) {
+						aliveChilds = 0;
+						foreach (GameObject child in childs) {
+								if (child.gameObject) {
+										aliveChilds++;
+								}
 						}
-				}
-				if (aliveChilds < 1) {
-						// delay for slight epicness
-						Destroy (this.gameObject, 0.1f);
+						if (aliveChilds < 1) {
+								// delay for slight epicness
+								Destroy (this.gameObject, 0.1f);
+						}
 				}
 		}
 }
