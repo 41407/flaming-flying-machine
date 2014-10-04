@@ -10,6 +10,7 @@ public class SpawnEnemy : MonoBehaviour
 		public float beat = 1;
 		private float ms;
 		private GameObject player;
+		private bool enemyHasBeenSpawned = false;
 
 		void Start ()
 		{
@@ -20,9 +21,9 @@ public class SpawnEnemy : MonoBehaviour
 		void Update ()
 		{
 				if (Metronome.bar == bar && 
-						Metronome.beat == beat) {
+						Metronome.beat == beat && !enemyHasBeenSpawned) {
+						enemyHasBeenSpawned = true;
 						Spawn ();
-						Destroy (this);
 				}
 		}
 
