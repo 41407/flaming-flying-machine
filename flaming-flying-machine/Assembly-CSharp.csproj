@@ -49,6 +49,7 @@
      <Compile Include="Assets\Boss.cs" />
      <Compile Include="Assets\BulletSpawner.cs" />
      <Compile Include="Assets\CavemanTest.cs" />
+     <Compile Include="Assets\EnemyBasics.cs" />
      <Compile Include="Assets\Level1Boss1.cs" />
      <Compile Include="Assets\Level1BossMovement.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />

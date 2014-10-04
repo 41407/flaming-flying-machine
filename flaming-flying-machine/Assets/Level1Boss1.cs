@@ -1,17 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Level1Boss1 : MonoBehaviour {
+public class Level1Boss1 : MonoBehaviour
+{
 
-	public Vector2 snapPosition;
+		public GameObject[] bulletSpawners;
+		private bool readyToFire = true;
+		// Use this for initialization
+		void Start ()
+		{
 
-	// Use this for initialization
-	void Start () {
+		}
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+		// Update is called once per frame
+		void Update ()
+		{
+				if (readyToFire && Metronome.beat == 1) {
+						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], gameObject.transform.position, Quaternion.identity);
+						Vector2 start = gameObject.transform.position;
+						Vector2 end = new Vector2 (gameObject.transform.position.x + 4, gameObject.transform.position.y + 4);
+						spawner.GetComponent<BulletSpawner> ().start = start;
+						spawner.GetComponent<BulletSpawner> ().end = end;
+			spawner.GetComponent<BulletSpawner> ().angleModifier = 5;
+			spawner.GetComponent<BulletSpawner> ().speed = 5;
+						readyToFire = false;
+				}
+				if (readyToFire && Metronome.beat == 3) {
+						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], gameObject.transform.position, Quaternion.identity);
+						Vector2 start = gameObject.transform.position;
+						Vector2 end = new Vector2 (gameObject.transform.position.x - 4, gameObject.transform.position.y - 4);
+						spawner.GetComponent<BulletSpawner> ().start = start;
+						spawner.GetComponent<BulletSpawner> ().end = end;
+			spawner.GetComponent<BulletSpawner> ().angleModifier = -5;
+			spawner.GetComponent<BulletSpawner> ().speed = 5;
+						readyToFire = false;
+				}
+				if (Metronome.beat == 2) {
+						readyToFire = true;	
+				}
+				if (Metronome.beat == 4) {
+						readyToFire = true;	
+				}
+		}
 }

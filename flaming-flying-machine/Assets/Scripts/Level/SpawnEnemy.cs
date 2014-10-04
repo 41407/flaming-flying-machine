@@ -34,6 +34,9 @@ public class SpawnEnemy : MonoBehaviour
 				if (newEnemy.GetComponent<EnemyShooting> ()) {		
 						newEnemy.GetComponent<EnemyShooting> ().player = player;
 				}
+				if (newEnemy.GetComponent<EnemyBasics> ()) {
+						newEnemy.GetComponent<EnemyBasics> ().player = player;
+				}
 				if (newEnemy.GetComponent<CreateRotatorChilds> ()) {
 						newEnemy.GetComponent<CreateRotatorChilds> ().player = player;
 				}
