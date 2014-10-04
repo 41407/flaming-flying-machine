@@ -1,14 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Metronome.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Boss.cs">
     <Files>
-      <File FileName="Assets/Metronome.cs" Line="1" Column="1" />
-      <File FileName="Assets/SpawnEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/ParitcleLookAt.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LevelScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/PlayerTrail.cs" Line="1" Column="1" />
-      <File FileName="Assets/AlphaRamp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Metronome.cs" Line="1" Column="1" />
+      <File FileName="Assets/Boss.cs" Line="15" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
