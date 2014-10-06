@@ -8,7 +8,7 @@ public class PlayerFiring : MonoBehaviour
 		public float firingDelay;
 		public float speed;
 		private bool firing = false;
-		private float firingCooldown = 0;
+		private float timeSinceLastShot = 0;
 		// Use this for initialization
 		void Start ()
 		{
@@ -26,14 +26,14 @@ public class PlayerFiring : MonoBehaviour
 						firing = false;
 						gameObject.GetComponent<PlayerAudio> ().firing = false;
 				}
-				if (firing && firingCooldown >= firingDelay) {
-						firingCooldown = 0;
+				if (firing && timeSinceLastShot >= firingDelay) {
+						timeSinceLastShot = 0;
 						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, Quaternion.identity);
 						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 						newBullet.GetComponent<BulletProperties> ().speed = speed;
 						newBullet.GetComponent<BulletProperties> ().direction = Vector3.up;
 						Destroy (newBullet, 1.0f);
 				}
-				firingCooldown += Time.deltaTime;
+				timeSinceLastShot += Time.deltaTime;
 		}
 }

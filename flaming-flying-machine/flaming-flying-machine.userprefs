@@ -1,26 +1,47 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Input/UserInputMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyScripts/EnemyShooting.cs">
     <Files>
-      <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="30" Column="52" />
-      <File FileName="Assets/PlayerAudio.cs" Line="1" Column="1" />
-      <File FileName="Assets/AudioScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level/Metronome.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level/SpawnEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Camera/Shake.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="29" Column="7" />
+      <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="37" Column="5" />
+      <File FileName="Assets/Scripts/Level/Metronome.cs" Line="35" Column="2" />
+      <File FileName="Assets/Scripts/Level/SpawnEnemy.cs" Line="17" Column="25" />
+      <File FileName="Assets/Scripts/Camera/Shake.cs" Line="27" Column="5" />
       <File FileName="Assets/Scripts/Level/LevelScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Background/BackgroundGenerator.cs" Line="14" Column="5" />
-      <File FileName="Assets/Scripts/EnemyScripts/CreateRotatorChilds.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyScripts/CreateRotatorChilds.cs" Line="18" Column="65" />
       <File FileName="Assets/Levels/1.txt" Line="1" Column="1" />
       <File FileName="Assets/Scripts/LookAtObject.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Angle.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/EnemyShooting.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/PlayerFiring.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/SquarebackRandomizations.cs" Line="1" Column="1" />
-      <File FileName="Assets/Squareback.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Effect/AlphaRamp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyScripts/EnemyShooting.cs" Line="13" Column="32" />
+      <File FileName="Assets/Scripts/Player/PlayerFiring.cs" Line="34" Column="12" />
+      <File FileName="Assets/Scripts/Effect/AlphaRamp.cs" Line="24" Column="82" />
+      <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="12" Column="3" />
+      <File FileName="Assets/Scripts/Audio/AudioPitchRandomization.cs" Line="13" Column="7" />
+      <File FileName="Assets/Scripts/Audio/AudioScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Audio/PlayerAudio.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Audio/Sound.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Background/Squareback.cs" Line="20" Column="5" />
+      <File FileName="Assets/Scripts/Background/SquarebackRandomizations.cs" Line="28" Column="5" />
+      <File FileName="Assets/Scripts/Bullet/BasicBullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Bullet/BulletProperties.cs" Line="14" Column="5" />
+      <File FileName="Assets/Scripts/Bullet/BulletSpawner.cs" Line="48" Column="5" />
+      <File FileName="Assets/Scripts/Camera/CameraShake.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Debug-Test/CavemanTest.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Debug-Test/PendulumMovement.cs" Line="38" Column="3" />
+      <File FileName="Assets/Scripts/Debug-Test/TimerText.cs" Line="26" Column="3" />
+      <File FileName="Assets/Scripts/Effect/ParitcleLookAt.cs" Line="15" Column="3" />
+      <File FileName="Assets/Scripts/Effect/PlayerTrail.cs" Line="18" Column="32" />
+      <File FileName="Assets/Scripts/Effect/ScaleFlicker.cs" Line="20" Column="5" />
+      <File FileName="Assets/Scripts/EnemyScripts/BasicEnemyMovement.cs" Line="10" Column="3" />
+      <File FileName="Assets/Scripts/EnemyScripts/Boss.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyScripts/EnemyBasics.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyScripts/EnemyDestruction.cs" Line="13" Column="40" />
+      <File FileName="Assets/Scripts/EnemyScripts/Level1Boss1.cs" Line="31" Column="34" />
+      <File FileName="Assets/Scripts/EnemyScripts/Level1BossMovement.cs" Line="20" Column="27" />
+      <File FileName="Assets/Scripts/EnemyScripts/OrbitAroundParent.cs" Line="24" Column="5" />
+      <File FileName="Assets/Scripts/Player/PlayerLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Rotate.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

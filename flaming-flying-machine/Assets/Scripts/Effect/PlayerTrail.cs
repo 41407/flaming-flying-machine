@@ -15,7 +15,7 @@ public class PlayerTrail : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.frameCount % density == 0) {
-			Destroy(Instantiate(sprite, gameObject.transform.position, Quaternion.identity), lifetime);
+			Destroy(Instantiate(sprite, transform.position, Quaternion.identity), lifetime);
 		}
 	}
 }

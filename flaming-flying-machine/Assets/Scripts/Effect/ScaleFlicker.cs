@@ -17,6 +17,6 @@ public class ScaleFlicker : MonoBehaviour
 		void Update ()
 		{
 				float randomRange = Random.value * (variance) + minimum;
-				this.transform.localScale = new Vector2(randomRange, randomRange);
+				transform.localScale = new Vector2(randomRange, randomRange);
 		}
 }
