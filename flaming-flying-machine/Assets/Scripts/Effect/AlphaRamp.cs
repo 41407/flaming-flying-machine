@@ -21,8 +21,8 @@ public class AlphaRamp : MonoBehaviour
 		{
 				if (currentAlpha >= endingAlpha) {
 						currentAlpha -= alphaDecayRate;
-						Color c = new Color (gameObject.renderer.material.color.r, gameObject.renderer.material.color.g, gameObject.renderer.material.color.b, currentAlpha);
-						gameObject.renderer.material.color = c;
+						Color c = new Color (renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, currentAlpha);
+						renderer.material.color = c;
 						
 				} else if (destroyWhenAtTarget) {
 						Destroy (gameObject);

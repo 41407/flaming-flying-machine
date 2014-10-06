@@ -21,7 +21,7 @@ public class OrbitAroundParent : MonoBehaviour
 		{
 				float xPos = parent.transform.position.x + (Mathf.Sin (position + (2 * (float)index / 3.0f) * Mathf.PI) * radius);
 				float yPos = parent.transform.position.y + (Mathf.Cos (position + (2 * (float)index / 3.0f) * Mathf.PI) * radius);
-				gameObject.transform.position = new Vector3 (xPos, yPos, 0);
+				transform.position = new Vector3 (xPos, yPos, 0);
 				position += speed;
 		}
 }

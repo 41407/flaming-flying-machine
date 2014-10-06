@@ -16,23 +16,23 @@ public class Level1Boss1 : MonoBehaviour
 		void Update ()
 		{
 				if (readyToFire && Metronome.beat == 1) {
-						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], gameObject.transform.position, Quaternion.identity);
+						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], transform.position, Quaternion.identity);
 						Vector2 start = gameObject.transform.position;
-						Vector2 end = new Vector2 (gameObject.transform.position.x + 4, gameObject.transform.position.y + 4);
+						Vector2 end = new Vector2 (gameObject.transform.position.x + 4, transform.position.y + 4);
 						spawner.GetComponent<BulletSpawner> ().start = start;
 						spawner.GetComponent<BulletSpawner> ().end = end;
-			spawner.GetComponent<BulletSpawner> ().angleModifier = 5;
-			spawner.GetComponent<BulletSpawner> ().speed = 5;
+						spawner.GetComponent<BulletSpawner> ().angleModifier = 5;
+						spawner.GetComponent<BulletSpawner> ().speed = 5;
 						readyToFire = false;
 				}
 				if (readyToFire && Metronome.beat == 3) {
-						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], gameObject.transform.position, Quaternion.identity);
+						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], transform.position, Quaternion.identity);
 						Vector2 start = gameObject.transform.position;
-						Vector2 end = new Vector2 (gameObject.transform.position.x - 4, gameObject.transform.position.y - 4);
+						Vector2 end = new Vector2 (transform.position.x - 4, transform.position.y - 4);
 						spawner.GetComponent<BulletSpawner> ().start = start;
 						spawner.GetComponent<BulletSpawner> ().end = end;
-			spawner.GetComponent<BulletSpawner> ().angleModifier = -5;
-			spawner.GetComponent<BulletSpawner> ().speed = 5;
+						spawner.GetComponent<BulletSpawner> ().angleModifier = -5;
+						spawner.GetComponent<BulletSpawner> ().speed = 5;
 						readyToFire = false;
 				}
 				if (Metronome.beat == 2) {

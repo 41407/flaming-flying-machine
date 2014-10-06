@@ -11,6 +11,6 @@ public class BulletProperties : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				gameObject.transform.Translate (direction * speed * Time.deltaTime);
+				transform.Translate (direction * speed * Time.deltaTime);
 		}
 }

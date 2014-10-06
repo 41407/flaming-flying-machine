@@ -35,6 +35,6 @@ public class PendulumMovement : MonoBehaviour {
 			movementVector = new Vector2 (0,0);
 		}
 
-		this.gameObject.transform.Translate (movementVector * Time.deltaTime * Time.timeScale);
+		transform.Translate (movementVector * Time.deltaTime * Time.timeScale);
 	}
 }

@@ -16,8 +16,8 @@ public class Level1BossMovement : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				gameObject.transform.position = Vector2.Lerp (gameObject.transform.position, positions [currentPositionIndex], 0.5f * Time.deltaTime);
-				if (Vector2.Distance (gameObject.transform.position, positions [currentPositionIndex]) < 1.0f) {
+				gameObject.transform.position = Vector2.Lerp (transform.position, positions [currentPositionIndex], 0.5f * Time.deltaTime);
+				if (Vector2.Distance (transform.position, positions [currentPositionIndex]) < 1.0f) {
 						currentPositionIndex++;
 				}
 				if (currentPositionIndex >= positions.Length) {

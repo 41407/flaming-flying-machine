@@ -10,7 +10,7 @@ public class AudioPitchRandomization : MonoBehaviour
 		void Start ()
 		{
 				if (gameObject.audio) {
-						gameObject.audio.pitch = Mathf.Min (1 + Random.Range (-amount, amount));
+						audio.pitch = Mathf.Min (1 + Random.Range (-amount, amount));
 				}
 		}
 	

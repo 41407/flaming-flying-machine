@@ -18,7 +18,7 @@ public class BulletSpawner : MonoBehaviour
 		void Start ()
 		{
 
-				gameObject.transform.position = start;
+				transform.position = start;
 				iteration = end - start;
 				iteration = new Vector2 (iteration.x / (float)shots, iteration.y / (float)shots);
 		}
@@ -45,6 +45,6 @@ public class BulletSpawner : MonoBehaviour
 
 		void Move ()
 		{
-				gameObject.transform.Translate (iteration);
+				transform.Translate (iteration);
 		}
 }

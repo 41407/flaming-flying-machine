@@ -12,6 +12,6 @@ public class ParitcleLookAt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.LookAt (objectToLookAt.transform.position);
+		transform.LookAt (objectToLookAt.transform.position);
 	}
 }

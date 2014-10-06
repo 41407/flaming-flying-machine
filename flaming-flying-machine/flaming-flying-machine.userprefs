@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Background/BackgroundGenerator.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Input/UserInputMovement.cs">
     <Files>
-      <File FileName="Assets/PlayerAudio.cs" Line="24" Column="33" />
+      <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="30" Column="52" />
+      <File FileName="Assets/PlayerAudio.cs" Line="1" Column="1" />
       <File FileName="Assets/AudioScript.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Level/Metronome.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Level/SpawnEnemy.cs" Line="1" Column="1" />
@@ -16,9 +17,10 @@
       <File FileName="Assets/Scripts/EnemyScripts/EnemyShooting.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Player/PlayerFiring.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/SquarebackRandomizations.cs" Line="18" Column="61" />
+      <File FileName="Assets/SquarebackRandomizations.cs" Line="1" Column="1" />
       <File FileName="Assets/Squareback.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Effect/AlphaRamp.cs" Line="24" Column="1" />
+      <File FileName="Assets/Scripts/Effect/AlphaRamp.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

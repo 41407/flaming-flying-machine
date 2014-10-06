@@ -17,6 +17,6 @@ public class Squareback : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				gameObject.transform.Translate (Vector3.down * speed * Time.deltaTime);
+				transform.Translate (Vector3.down * speed * Time.deltaTime);
 		}
 }

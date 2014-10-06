@@ -9,6 +9,6 @@ public class ObjectFollowsMouse : MonoBehaviour {
 		Vector3 mouseScreenPosition = Input.mousePosition;
 		Vector3 mouseWorldPosition = cameraToUse.ScreenToWorldPoint (mouseScreenPosition);	
 		mouseWorldPosition.z = 0;
-		gameObject.transform.position = mouseWorldPosition;
+		transform.position = mouseWorldPosition;
 	}
 }

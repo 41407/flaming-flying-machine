@@ -24,6 +24,6 @@ public class Shake : MonoBehaviour
 		{
 				this.shake *= shakeFactor;
 				Vector3 shaky = new Vector3 (x + Random.value * shake, y + Random.value * shake, gameObject.transform.position.z);
-				gameObject.transform.position = shaky;
+				transform.position = shaky;
 		}
 }
