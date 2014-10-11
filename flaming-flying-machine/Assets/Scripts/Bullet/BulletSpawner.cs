@@ -4,47 +4,67 @@ using System.Collections;
 public class BulletSpawner : MonoBehaviour
 {
 
-		public Vector2 start;
-		public Vector2 end;
-		public float note;
-		public int shots;
-		public float angleModifier;
+		public Vector2 startPosition;
+		public Vector2 endPosition;
+		public float noteDuration = 0;
+		public int shots = 1;
+		public float startAngle = 0;
+		public float endAngle = 0;
+		private float angleModifier = 0;
 		private int fired = 0;
-		public float speed;
+		public float speed = 5;
 		public GameObject bullet;
-		private Vector2 iteration;
+		private Vector2 positionStep;
+		private Quaternion angle;
 
-		// Use this for initialization
 		void Start ()
 		{
-
-				transform.position = start;
-				iteration = end - start;
-				iteration = new Vector2 (iteration.x / (float)shots, iteration.y / (float)shots);
+				ValidateValues ();
+				angle = Quaternion.AngleAxis (startAngle, Vector3.forward);
+				angleModifier = (Mathf.Abs (startAngle) + Mathf.Abs (endAngle)) / shots;
+				if (startAngle > endAngle) {
+						angleModifier *= -1;
+				}
+				transform.position = startPosition;
+				positionStep = endPosition - startPosition;
+				positionStep = new Vector2 (positionStep.x / (float)shots, positionStep.y / (float)shots);
 		}
-	
-		// Update is called once per frame
+
+		void ValidateValues ()
+		{		
+				if (shots < 1) {
+						Debug.Log ("Number of shots initialized at " + shots, gameObject);
+						shots = 1;
+				}
+		}
+
 		void Update ()
 		{
 				if (fired >= shots) {
 						Destroy (gameObject);		
 				}
-				if (Metronome.beat % note == 0) {
+				if (Metronome.beat % noteDuration == 0) {
 						Shoot ();
-						Move ();
+						MoveSpawnpoint ();
+						ApplyRotation ();
 				}
 		}
 
 		void Shoot ()
 		{
-				GameObject b = (GameObject)Instantiate (bullet, gameObject.transform.position, Quaternion.AngleAxis ((float)fired * angleModifier, Vector3.forward));
-				b.GetComponent<BulletProperties> ().direction = Vector3.down;
-				b.GetComponent<BulletProperties> ().speed = speed;
+				GameObject createdBullet = (GameObject)Instantiate (bullet, gameObject.transform.position, angle);
+				createdBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
+				createdBullet.GetComponent<BulletProperties> ().speed = speed;
 				fired++;
 		}
 
-		void Move ()
+		void MoveSpawnpoint ()
 		{
-				transform.Translate (iteration);
+				transform.Translate (positionStep);
+		}
+
+		void ApplyRotation ()
+		{
+				angle = Quaternion.AngleAxis (startAngle + fired * angleModifier, Vector3.forward);
 		}
 }

@@ -19,9 +19,10 @@ public class Level1Boss1 : MonoBehaviour
 						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], transform.position, Quaternion.identity);
 						Vector2 start = gameObject.transform.position;
 						Vector2 end = new Vector2 (gameObject.transform.position.x + 4, transform.position.y + 4);
-						spawner.GetComponent<BulletSpawner> ().start = start;
-						spawner.GetComponent<BulletSpawner> ().end = end;
-						spawner.GetComponent<BulletSpawner> ().angleModifier = 5;
+						spawner.GetComponent<BulletSpawner> ().startPosition = start;
+						spawner.GetComponent<BulletSpawner> ().endPosition = end;
+						spawner.GetComponent<BulletSpawner> ().startAngle = -10;
+						spawner.GetComponent<BulletSpawner> ().endAngle = 40;
 						spawner.GetComponent<BulletSpawner> ().speed = 5;
 						readyToFire = false;
 				}
@@ -29,9 +30,10 @@ public class Level1Boss1 : MonoBehaviour
 						GameObject spawner = (GameObject)Instantiate (bulletSpawners [0], transform.position, Quaternion.identity);
 						Vector2 start = gameObject.transform.position;
 						Vector2 end = new Vector2 (transform.position.x - 4, transform.position.y - 4);
-						spawner.GetComponent<BulletSpawner> ().start = start;
-						spawner.GetComponent<BulletSpawner> ().end = end;
-						spawner.GetComponent<BulletSpawner> ().angleModifier = -5;
+						spawner.GetComponent<BulletSpawner> ().startPosition = start;
+						spawner.GetComponent<BulletSpawner> ().endPosition = end;
+						spawner.GetComponent<BulletSpawner> ().startAngle = 10;
+						spawner.GetComponent<BulletSpawner> ().endAngle = -40;
 						spawner.GetComponent<BulletSpawner> ().speed = 5;
 						readyToFire = false;
 				}
