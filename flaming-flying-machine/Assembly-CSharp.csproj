@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Debug-Test\PendulumMovement.cs" />
      <Compile Include="Assets\Scripts\Debug-Test\TimerText.cs" />
      <Compile Include="Assets\Scripts\Effect\AlphaRamp.cs" />
+     <Compile Include="Assets\Scripts\Effect\ApplyParentSprite.cs" />
      <Compile Include="Assets\Scripts\Effect\ParitcleLookAt.cs" />
      <Compile Include="Assets\Scripts\Effect\PlayerTrail.cs" />
      <Compile Include="Assets\Scripts\Effect\ScaleFlicker.cs" />
