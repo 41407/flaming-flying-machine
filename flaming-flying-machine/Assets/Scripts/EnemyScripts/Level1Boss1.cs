@@ -24,6 +24,10 @@ public class Level1Boss1 : MonoBehaviour
 						spawner.GetComponent<BulletSpawner> ().startAngle = -10;
 						spawner.GetComponent<BulletSpawner> ().endAngle = 40;
 						spawner.GetComponent<BulletSpawner> ().speed = 5;
+						
+			spawner.GetComponent<BulletSpawner> ().shots = 10;
+			spawner.GetComponent<BulletSpawner> ().rateOfFire = 0.2f;
+
 						readyToFire = false;
 				}
 				if (readyToFire && Metronome.beat == 3) {
@@ -34,7 +38,9 @@ public class Level1Boss1 : MonoBehaviour
 						spawner.GetComponent<BulletSpawner> ().endPosition = end;
 						spawner.GetComponent<BulletSpawner> ().startAngle = 10;
 						spawner.GetComponent<BulletSpawner> ().endAngle = -40;
-						spawner.GetComponent<BulletSpawner> ().speed = 5;
+			spawner.GetComponent<BulletSpawner> ().speed = 5;
+			spawner.GetComponent<BulletSpawner> ().shots = 10;
+			spawner.GetComponent<BulletSpawner> ().rateOfFire = 0.2f;
 						readyToFire = false;
 				}
 				if (Metronome.beat == 2) {
