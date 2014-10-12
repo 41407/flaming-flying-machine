@@ -15,6 +15,7 @@ public class PlayerFiring : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
+				xp = 0;
 				firingDelay /= 1000;
 		}
 
