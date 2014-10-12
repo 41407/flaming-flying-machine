@@ -49,6 +49,7 @@
      <Compile Include="Assets\EliteMovement.cs" />
      <Compile Include="Assets\EnemyBasicShooting.cs" />
      <Compile Include="Assets\Fire.cs" />
+     <Compile Include="Assets\PlayerBulletDestruction.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioScript.cs" />
