@@ -6,11 +6,18 @@ public class EnemyDestruction : MonoBehaviour
 		public GameObject hitEffect;
 		public GameObject explosion;
 		public int health;
+		private int maxHealth;
 		public bool destroysBulletsOnImpact;
+
+		void Start ()
+		{
+				maxHealth = health;
+		}
 
 		void Update ()
 		{
 				if (health <= 0) {	
+						PlayerFiring.xpUp (maxHealth);
 						Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 3.0f);
 						Destroy (gameObject);
 				}

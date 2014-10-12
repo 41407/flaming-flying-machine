@@ -9,12 +9,18 @@ public class PlayerFiring : MonoBehaviour
 		public float speed;
 		private bool firing = false;
 		private float timeSinceLastShot = 0;
+		static public int xp = 0;
 		// Use this for initialization
 		void Start ()
 		{
 				firingDelay /= 1000;
 		}
-	
+
+		public static void xpUp (int xpGain)
+		{	
+				xp += xpGain;
+		}
+
 		// Update is called once per frame
 		void Update ()
 		{
@@ -29,9 +35,9 @@ public class PlayerFiring : MonoBehaviour
 				if (firing && timeSinceLastShot >= firingDelay) {
 						timeSinceLastShot = 0;
 						GameObject newBullet = (GameObject)Instantiate (bullet, transform.position, Quaternion.AngleAxis (180, Vector3.back));
-			Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
-			newBullet.GetComponent<BulletProperties> ().speed = speed;
-			newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
+						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
+						newBullet.GetComponent<BulletProperties> ().speed = speed;
+						newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
 						Destroy (newBullet, 1.0f);
 				}
 				timeSinceLastShot += Time.deltaTime;
