@@ -38,6 +38,13 @@ public class Fire : MonoBehaviour
 		{
 				Shoot (position, (Vector2)player.transform.position - position, speed);
 		}
+
+		public void Player (Vector2 position, float speed, float accuracy)
+		{
+				Vector2 direction = (Vector2)player.transform.position - position;
+				direction = Quaternion.AngleAxis (Random.Range (-accuracy, accuracy), Vector3.forward) * direction;
+				Shoot (position, (Vector2)player.transform.position - position, speed);
+		}
 	
 		private void Shoot (Vector2 position, Quaternion direction, float speed)
 		{

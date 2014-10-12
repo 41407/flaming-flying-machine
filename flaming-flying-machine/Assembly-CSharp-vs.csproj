@@ -56,6 +56,7 @@
      <Compile Include="Assets\MenuLogic.cs" />
      <Compile Include="Assets\MenuMouseOver.cs" />
      <Compile Include="Assets\PlayerBulletDestruction.cs" />
+     <Compile Include="Assets\Scripts\AnchorToPosition.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioScript.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\Scripts\MovementTowardsPoint.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerLogic.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Scripts\ShootTowardsPlayer.cs" />
      <Compile Include="Assets\Spawn.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>

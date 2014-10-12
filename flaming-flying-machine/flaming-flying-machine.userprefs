@@ -7,14 +7,16 @@
       <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Input/UserInputMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/ConstantRotation.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level/LevelScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Level/LevelScript.cs" Line="20" Column="78" />
       <File FileName="Assets/Scripts/Effect/ApplyParentSprite.cs" Line="1" Column="1" />
-      <File FileName="Assets/Fire.cs" Line="10" Column="1" />
+      <File FileName="Assets/Fire.cs" Line="45" Column="101" />
       <File FileName="Assets/EnemyBasicShooting.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Audio/PlayerAudio.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Level/SpawnEnemy.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Background/BackgroundGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Spawn.cs" Line="27" Column="44" />
+      <File FileName="Assets/Spawn.cs" Line="40" Column="42" />
+      <File FileName="Assets/Scripts/MovementTowardsPoint.cs" Line="4" Column="34" />
+      <File FileName="Assets/Scripts/ShootTowardsPlayer.cs" Line="9" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

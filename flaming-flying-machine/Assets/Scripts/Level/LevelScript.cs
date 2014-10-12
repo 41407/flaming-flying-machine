@@ -17,6 +17,7 @@ public class LevelScript : MonoBehaviour
 				Screen.showCursor = false;
 				timer = 0.0f;
 				Spawn.instance.StraightMovingPawn (new Vector2 (0, 30), new Vector2 (0, 15), 5);
+				Spawn.instance.AnchoringPawn (new Vector2 (0, 30), new Vector2 (0, 15), 5);
 		}
 
 		// Update is called once per frame
