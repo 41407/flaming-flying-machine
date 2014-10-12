@@ -28,10 +28,9 @@ public class PlayerFiring : MonoBehaviour
 				}
 				if (firing && timeSinceLastShot >= firingDelay) {
 						timeSinceLastShot = 0;
-						GameObject newBullet = (GameObject)Instantiate (bullet, this.gameObject.transform.position, Quaternion.identity);
+						GameObject newBullet = (GameObject)Instantiate (bullet, transform.position, Quaternion.AngleAxis (180, Vector3.back));
 						Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 						newBullet.GetComponent<BulletProperties> ().speed = speed;
-						newBullet.GetComponent<BulletProperties> ().direction = Vector3.up;
 						Destroy (newBullet, 1.0f);
 				}
 				timeSinceLastShot += Time.deltaTime;

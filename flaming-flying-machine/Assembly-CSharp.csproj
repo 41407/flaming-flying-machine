@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\EnemyBasicShooting.cs" />
+     <Compile Include="Assets\Fire.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioScript.cs" />

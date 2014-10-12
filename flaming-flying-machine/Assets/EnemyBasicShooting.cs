@@ -16,16 +16,13 @@ public class EnemyBasicShooting : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				if (readyToFire && Metronome.beat == 1) {
-						GameObject spawner = (GameObject)Instantiate (bulletSpawner, transform.position, Quaternion.identity);
-						spawner.GetComponent<BulletSpawner> ().startPosition = transform.position;
-						spawner.GetComponent<BulletSpawner> ().endPosition = transform.position;
-			spawner.GetComponent<BulletSpawner> ().shots = 1;
-			spawner.GetComponent<BulletSpawner> ().speed = 10;
+				if (readyToFire && Metronome.beat % 2 == 1) {
+						Fire.instance.AtAngle (transform.position, 0, 20);
 						readyToFire = false;
 				}
-				if (Metronome.beat == 2) {
+				if (Metronome.beat % 2 == 0) {
 						readyToFire = true;
 				}
+
 		}
 }
