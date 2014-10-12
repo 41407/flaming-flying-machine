@@ -10,7 +10,7 @@ public class EnemyDestruction : MonoBehaviour
 		void Update ()
 		{
 				if (health <= 0) {	
-						Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 0.1f);
+						Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 3.0f);
 						Destroy (gameObject);
 				}
 		}
