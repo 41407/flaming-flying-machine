@@ -29,7 +29,7 @@ public class SpawnEnemy : MonoBehaviour
 
 		void Spawn ()
 		{
-				Vector3 spawnPosition = new Vector3 (Random.Range (xCooridnate, xCooridnate), 0f, 0f);
+				Vector3 spawnPosition = new Vector3 (Random.Range (xCooridnate, xCooridnate), 40f, 0f);
 				GameObject newEnemy = (GameObject)Instantiate (enemyType, spawnPosition, Quaternion.identity);
 				if (newEnemy.GetComponent<EnemyShooting> ()) {		
 						newEnemy.GetComponent<EnemyShooting> ().player = player;

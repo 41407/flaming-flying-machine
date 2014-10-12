@@ -92,8 +92,10 @@
      <Compile Include="Assets\Scripts\Level\Metronome.cs" />
      <Compile Include="Assets\Scripts\Level\SpawnEnemy.cs" />
      <Compile Include="Assets\Scripts\LookAtObject.cs" />
+     <Compile Include="Assets\Scripts\MovementTowardsPoint.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerLogic.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Spawn.cs" />
      <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

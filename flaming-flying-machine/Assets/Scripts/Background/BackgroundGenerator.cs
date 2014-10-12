@@ -21,7 +21,7 @@ public class BackgroundGenerator : MonoBehaviour
 						int random = (int)Mathf.Pow (-1, Random.Range (0, 2));
 						random *= 30;
 						random += Random.Range (-5, 5);
-						Vector3 pos = new Vector3 (random, 11, 2);
+						Vector3 pos = new Vector3 (random, 40, 2);
 						Instantiate (backgrounds [Random.Range (0, backgrounds.Length - 1)], pos, Quaternion.identity);
 				}
 		}
