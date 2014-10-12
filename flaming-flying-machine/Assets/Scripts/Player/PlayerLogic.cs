@@ -7,6 +7,8 @@ public class PlayerLogic : MonoBehaviour
 		public GameObject bullet;
 		public float firingDelay;
 		public float speed;
+		public float speedFlatRandomization;
+		public float angleRandomization;
 		static public int level = 1;
 		public Sprite[] sprites;
 		private bool firing = false;
@@ -24,6 +26,7 @@ public class PlayerLogic : MonoBehaviour
 		void Update ()
 		{		
 				CheckXp ();
+				CheckLevel ();
 				CheckInput ();
 				FiringLogic ();
 				Invulnerability ();
@@ -56,8 +59,27 @@ public class PlayerLogic : MonoBehaviour
 		public static void xpUp (int xpGain)
 		{	
 				xp += xpGain;
-				level = Mathf.Max (1, xp / 50);
 				//				print ("Current xp: " + xp + ", level: " + level);
+		}
+
+		void CheckLevel ()
+		{
+				if (level == 1 && xp >= 20) {
+						level++;
+						xp = 0;
+				}
+				if (level == 2 && xp >= 40) {
+						level++;
+						xp = 0;
+				}
+				if (level == 3 && xp >= 60) {
+						level++;
+						xp = 0;
+				}
+				if (level == 3 && xp >= 60) {
+						level++;
+						xp = 0;
+				}
 		}
 
 	#endregion
@@ -67,21 +89,23 @@ public class PlayerLogic : MonoBehaviour
 				if (firing && timeSinceLastShot >= firingDelay) {
 						timeSinceLastShot = 0;
 			
-						if (level > 0) {
+						if (level > 0 && level < 4) {
 								Shoot (transform.position, 0);
 						}
 			
-						if (level > 0) {
+						if (level > 1) {
 								Shoot (transform.position + (Vector3.left / 2.0f), 0);
 								Shoot (transform.position + (Vector3.right / 2.0f), 0);
 						}
-						if (level > 0) {
+						if (level > 2) {
 								Shoot (transform.position + (Vector3.left / 4.0f), 180);
 								Shoot (transform.position + (Vector3.right / 4.0f), 180);
 						}
-						if (level > 0) {
+						if (level > 3) {
 								Shoot (transform.position + (Vector3.left / 2.0f), -30);
-								Shoot (transform.position + (Vector3.right / 2.0f),  30);
+								Shoot (transform.position + (Vector3.left / 3.0f), 0);
+								Shoot (transform.position + (Vector3.right / 3.0f), 0);
+								Shoot (transform.position + (Vector3.right / 2.0f), 30);
 								Shoot (transform.position + (Vector3.left / 3.0f), 180 + 30);
 								Shoot (transform.position + (Vector3.right / 3.0f), 180 - 30);
 						}
@@ -110,9 +134,10 @@ public class PlayerLogic : MonoBehaviour
 
 		void Shoot (Vector2 position, float angle)
 		{
+				angle += Random.Range (-angleRandomization, angleRandomization);
 				GameObject newBullet = (GameObject)Instantiate (bullet, position, Quaternion.AngleAxis (180 + angle, Vector3.back));
 				Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
-				newBullet.GetComponent<BulletProperties> ().speed = speed;
+				newBullet.GetComponent<BulletProperties> ().speed = speed + Random.Range (-speedFlatRandomization, speedFlatRandomization);
 				newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
 				Destroy (newBullet, 1.0f);
 		}
