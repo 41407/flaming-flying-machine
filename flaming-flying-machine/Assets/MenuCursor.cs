@@ -10,7 +10,7 @@ public class MenuCursor : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-	
+				Screen.showCursor = false;
 		}
 	
 		// Update is called once per frame
@@ -27,6 +27,7 @@ public class MenuCursor : MonoBehaviour
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Level1")) {
 						MenuLogic.clickedButton = currentButton;
 						cam.GetComponent<MenuCamera> ().state = -1;
+						Destroy (gameObject, 0.01f);
 				}
 		}
 	

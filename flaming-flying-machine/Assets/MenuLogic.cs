@@ -19,9 +19,10 @@ public class MenuLogic : MonoBehaviour
 		void Update ()
 		{
 
-				mousePosition = GetWorldPositionOnPlane (Input.mousePosition, 0.0f);
-				mouse.transform.position = mousePosition;
-				print (clickedButton);
+				if (mouse) {
+						mousePosition = GetWorldPositionOnPlane (Input.mousePosition, 0.0f);
+						mouse.transform.position = mousePosition;
+				}
 		}
 
 		private Vector3 GetWorldPositionOnPlane (Vector3 screenPosition, float z)
@@ -36,8 +37,9 @@ public class MenuLogic : MonoBehaviour
 		public static void LoadLevel ()
 		{
 				if (clickedButton.Equals ("Button.Level1")) {
-			
 						Application.LoadLevel (1);
+				} else {
+						Application.LoadLevel (0);
 				}
 		}
 }
