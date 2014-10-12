@@ -1,30 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MenuMouseOver.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerFiring.cs">
     <Files>
-      <File FileName="Assets/Fire.cs" Line="28" Column="36" />
-      <File FileName="Assets/Scripts/Bullet/BulletSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Bullet/BasicBullet.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Bullet/BulletProperties.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/EnemyShooting.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/Level1Boss1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/Boss.cs" Line="1" Column="1" />
-      <File FileName="Assets/EnemyBasicShooting.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level/SpawnEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/PlayerFiring.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/BasicEnemyMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Angle.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/EnemyDestruction.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyScripts/Level1BossMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/EliteMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/PlayerBulletDestruction.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="1" Column="1" />
-      <File FileName="Assets/MenuLogic.cs" Line="1" Column="1" />
-      <File FileName="../../Cool-Alien-Agent/Cool-Alien-Agent/Assets/Scripts/Input/MoveToClickPersp.cs" Line="1" Column="1" />
-      <File FileName="Assets/MenuCursor.cs" Line="23" Column="23" />
-      <File FileName="Assets/MenuCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level/LevelScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/MenuMouseOver.cs" Line="9" Column="21" />
+      <File FileName="Assets/Scripts/Player/PlayerFiring.cs" Line="4" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

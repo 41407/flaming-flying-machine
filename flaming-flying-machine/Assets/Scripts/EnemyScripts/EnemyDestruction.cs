@@ -17,7 +17,7 @@ public class EnemyDestruction : MonoBehaviour
 		void Update ()
 		{
 				if (health <= 0) {	
-						PlayerFiring.xpUp (maxHealth);
+						PlayerLogic.xpUp (maxHealth);
 						Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 3.0f);
 						Destroy (gameObject);
 				}
