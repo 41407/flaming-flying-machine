@@ -3,7 +3,6 @@ using System.Collections;
 
 public class UserInputMovement : MonoBehaviour
 {
-		// Object that will be moved by this script
 		public GameObject objectToFollow;
 		public bool keyboardInput;
 		
@@ -32,6 +31,8 @@ public class UserInputMovement : MonoBehaviour
 						} else {
 								movementVector = distanceBetween;
 						}
+						Color c = objectToFollow.renderer.material.color;
+						objectToFollow.renderer.material.color = new Color (c.r, c.g, c.b, distanceBetween.magnitude);
 				}
 				
 				transform.Translate (movementVector * speed * Time.deltaTime * Time.timeScale);

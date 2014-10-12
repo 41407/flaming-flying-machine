@@ -68,12 +68,12 @@ public class PlayerLogic : MonoBehaviour
 						timeSinceLastShot = 0;
 			
 						if (level > 0) {
-								Shoot (0);
+								Shoot (transform.position, 0);
 						}
 			
 						if (level > 1) {
-								Shoot (-20f);
-								Shoot (20f);
+								Shoot (transform.position + (Vector3.left / 2.0f), 0);
+								Shoot (transform.position + (Vector3.right / 2.0f), 0);
 						}
 				}
 				timeSinceLastShot += Time.deltaTime;
@@ -98,9 +98,9 @@ public class PlayerLogic : MonoBehaviour
 				}
 		}
 
-		void Shoot (float angle)
+		void Shoot (Vector2 position, float angle)
 		{
-				GameObject newBullet = (GameObject)Instantiate (bullet, transform.position, Quaternion.AngleAxis (180 + angle, Vector3.back));
+				GameObject newBullet = (GameObject)Instantiate (bullet, position, Quaternion.AngleAxis (180 + angle, Vector3.back));
 				Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 				newBullet.GetComponent<BulletProperties> ().speed = speed;
 				newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
