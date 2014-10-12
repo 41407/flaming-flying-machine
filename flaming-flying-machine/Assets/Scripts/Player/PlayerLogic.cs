@@ -71,9 +71,19 @@ public class PlayerLogic : MonoBehaviour
 								Shoot (transform.position, 0);
 						}
 			
-						if (level > 1) {
+						if (level > 0) {
 								Shoot (transform.position + (Vector3.left / 2.0f), 0);
 								Shoot (transform.position + (Vector3.right / 2.0f), 0);
+						}
+						if (level > 0) {
+								Shoot (transform.position + (Vector3.left / 4.0f), 180);
+								Shoot (transform.position + (Vector3.right / 4.0f), 180);
+						}
+						if (level > 0) {
+								Shoot (transform.position + (Vector3.left / 2.0f), -30);
+								Shoot (transform.position + (Vector3.right / 2.0f),  30);
+								Shoot (transform.position + (Vector3.left / 3.0f), 180 + 30);
+								Shoot (transform.position + (Vector3.right / 3.0f), 180 - 30);
 						}
 				}
 				timeSinceLastShot += Time.deltaTime;
