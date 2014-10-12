@@ -66,9 +66,7 @@ public class BulletSpawner : MonoBehaviour
 
 		void Shoot ()
 		{
-				GameObject createdBullet = (GameObject)Instantiate (bullet, gameObject.transform.position, angle);
-				createdBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
-				createdBullet.GetComponent<BulletProperties> ().speed = speed;
+				Fire.at.Angle (transform.position, angle, speed);
 				fired++;
 		}
 

@@ -9,8 +9,6 @@ public class BulletProperties : MonoBehaviour
 
 		void Start ()
 		{
-				direction = Vector3.down;
-				print ("Bullet's speed: " + speed);
 		}
 
 		// Update is called once per frame
