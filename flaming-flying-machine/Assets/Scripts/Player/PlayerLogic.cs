@@ -26,9 +26,8 @@ public class PlayerLogic : MonoBehaviour
 				CheckXp ();
 				CheckInput ();
 				FiringLogic ();
-				
-		
-				invulnerabilityTimer -= Time.deltaTime;
+				Invulnerability ();
+
 		}
 
 		void CheckInput ()
@@ -40,6 +39,10 @@ public class PlayerLogic : MonoBehaviour
 				if (Input.GetMouseButtonUp (0)) {
 						firing = false;
 						gameObject.GetComponent<PlayerAudio> ().firing = false;
+				}
+
+				if (Input.GetMouseButtonDown (1)) {
+						invulnerabilityTimer = invulnerabilityPeriod;
 				}
 		}
 
@@ -74,6 +77,18 @@ public class PlayerLogic : MonoBehaviour
 						}
 				}
 				timeSinceLastShot += Time.deltaTime;
+		}
+
+		void Invulnerability ()
+		{
+				invulnerabilityTimer -= Time.deltaTime;
+				if (invulnerabilityTimer > 0) {
+						if (Time.frameCount % 3 == 0) {
+								renderer.enabled = !renderer.enabled;
+						}
+				} else {
+						renderer.enabled = true;
+				}
 		}
 
 		void OnTriggerEnter2D (Collider2D coll)
