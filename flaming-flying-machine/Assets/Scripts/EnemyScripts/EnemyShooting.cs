@@ -32,12 +32,6 @@ public class EnemyShooting : MonoBehaviour
 	
 		void Shoot ()
 		{
-				GameObject bullet = (GameObject)Instantiate (projectile, transform.position, Quaternion.identity);
-				bullet.GetComponent<BulletProperties> ().speed = projectileSpeed;
-				if (shootsAtPlayer) {
-						bullet.GetComponent<BulletProperties> ().direction = (player.transform.position - transform.position).normalized;
-				} else {
-						bullet.GetComponent<BulletProperties> ().direction = Vector3.down;	
-				}
+				Fire.at.Player (transform.position, projectileSpeed);
 		}
 }
