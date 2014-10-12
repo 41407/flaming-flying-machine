@@ -19,6 +19,9 @@ public class MenuCursor : MonoBehaviour
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Start")) {
 						cam.GetComponent<MenuCamera> ().state = 1;		
 				}
+				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Quit")) {
+						Application.Quit ();	
+				}
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Level1")) {
 						Application.LoadLevel (1);	
 				}
@@ -26,15 +29,11 @@ public class MenuCursor : MonoBehaviour
 	
 		void OnTriggerEnter2D (Collider2D col)
 		{
-				print ("GOJIRA");
-				print (col.gameObject.tag);
 				currentButton = col.gameObject.tag;
 		}
 
 		void OnTriggerExit2D (Collider2D col)
 		{
-				print ("GOJIRA");
-				print (col.gameObject.tag);
 				currentButton = "none";
 		}
 }

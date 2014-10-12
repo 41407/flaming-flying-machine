@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MenuCursor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MenuMouseOver.cs">
     <Files>
       <File FileName="Assets/Fire.cs" Line="28" Column="36" />
       <File FileName="Assets/Scripts/Bullet/BulletSpawner.cs" Line="1" Column="1" />
@@ -19,9 +19,12 @@
       <File FileName="Assets/EliteMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/PlayerBulletDestruction.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="1" Column="1" />
-      <File FileName="Assets/MenuLogic.cs" Line="19" Column="4" />
+      <File FileName="Assets/MenuLogic.cs" Line="1" Column="1" />
       <File FileName="../../Cool-Alien-Agent/Cool-Alien-Agent/Assets/Scripts/Input/MoveToClickPersp.cs" Line="1" Column="1" />
-      <File FileName="Assets/MenuCursor.cs" Line="32" Column="27" />
+      <File FileName="Assets/MenuCursor.cs" Line="23" Column="23" />
+      <File FileName="Assets/MenuCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Level/LevelScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/MenuMouseOver.cs" Line="9" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

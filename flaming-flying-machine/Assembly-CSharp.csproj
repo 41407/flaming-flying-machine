@@ -51,7 +51,9 @@
      <Compile Include="Assets\Fire.cs" />
      <Compile Include="Assets\MenuCamera.cs" />
      <Compile Include="Assets\MenuCursor.cs" />
+     <Compile Include="Assets\MenuGlow.cs" />
      <Compile Include="Assets\MenuLogic.cs" />
+     <Compile Include="Assets\MenuMouseOver.cs" />
      <Compile Include="Assets\PlayerBulletDestruction.cs" />
      <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioPitchRandomization.cs" />
