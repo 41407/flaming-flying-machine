@@ -5,6 +5,7 @@ public class PlayerLogic : MonoBehaviour
 {
 
 		public GameObject bullet;
+		public GameObject levelUpParticle;
 		public float firingDelay;
 		public float speed;
 		public float speedFlatRandomization;
@@ -19,6 +20,7 @@ public class PlayerLogic : MonoBehaviour
 
 		void Start ()
 		{
+				level = 1;
 				xp = 0;
 				firingDelay /= 1000;
 		}
@@ -67,18 +69,23 @@ public class PlayerLogic : MonoBehaviour
 				if (level == 1 && xp >= 20) {
 						level++;
 						xp = 0;
+						levelUpParticle.particleSystem.Play ();
+						
 				}
 				if (level == 2 && xp >= 40) {
 						level++;
 						xp = 0;
+						levelUpParticle.particleSystem.Play ();
 				}
 				if (level == 3 && xp >= 60) {
 						level++;
 						xp = 0;
+						levelUpParticle.particleSystem.Play ();
 				}
 				if (level == 3 && xp >= 60) {
 						level++;
 						xp = 0;
+						levelUpParticle.particleSystem.Play ();
 				}
 		}
 
@@ -86,7 +93,7 @@ public class PlayerLogic : MonoBehaviour
 
 		void FiringLogic ()
 		{
-				if (firing && timeSinceLastShot >= firingDelay) {
+				if (firing && timeSinceLastShot >= firingDelay && invulnerabilityTimer <= 0) {
 						timeSinceLastShot = 0;
 			
 						if (level > 0 && level < 4) {
@@ -132,10 +139,10 @@ public class PlayerLogic : MonoBehaviour
 				}
 		}
 
-		void Shoot (Vector2 position, float angle)
+		void Shoot (Vector3 position, float angle)
 		{
 				angle += Random.Range (-angleRandomization, angleRandomization);
-				GameObject newBullet = (GameObject)Instantiate (bullet, position, Quaternion.AngleAxis (180 + angle, Vector3.back));
+				GameObject newBullet = (GameObject)Instantiate (bullet, position + Vector3.back, Quaternion.AngleAxis (180 + angle, Vector3.back));
 				Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 				newBullet.GetComponent<BulletProperties> ().speed = speed + Random.Range (-speedFlatRandomization, speedFlatRandomization);
 				newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;

@@ -14,9 +14,8 @@ public class LevelScript : MonoBehaviour
 
 		void Start ()
 		{
+				Screen.showCursor = false;
 				timer = 0.0f;
-				
-
 		}
 
 		// Update is called once per frame

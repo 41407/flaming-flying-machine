@@ -18,7 +18,7 @@ public class EnemyBasicShooting : MonoBehaviour
 		{
 				if (readyToFire && Metronome.beat % 2 == 1) {
 						//			Fire.at.Angle (transform.position, 45, 20);
-						Fire.at.Player (transform.position, 20);
+						Fire.at.Angle (transform.position, 0, 20);
 						readyToFire = false;
 				}
 				if (Metronome.beat % 2 == 0) {

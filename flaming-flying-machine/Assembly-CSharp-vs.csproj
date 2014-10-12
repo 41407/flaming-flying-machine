@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ConstantRotation.cs" />
      <Compile Include="Assets\EliteMovement.cs" />
      <Compile Include="Assets\EnemyBasicShooting.cs" />
      <Compile Include="Assets\Fire.cs" />

@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ApplyParentSprite : MonoBehaviour {
+public class ApplyParentSprite : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		GameObject parent = transform.parent.gameObject;
-		renderer.material.mainTexture = parent.GetComponent<SpriteRenderer> ().sprite.texture;
-	}
+		// Use this for initialization
+		void Start ()
+		{
+		}
 	
-	// Update is called once per frame
-	void Update () {
+		// Update is called once per frame
+		void Update ()
+		{
+				GameObject parent = transform.parent.gameObject;
+				renderer.material.mainTexture = parent.GetComponent<SpriteRenderer> ().sprite.texture;
 	
-	}
+		}
 }

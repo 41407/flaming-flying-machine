@@ -50,5 +50,6 @@ public class Fire : MonoBehaviour
 				GameObject createdBullet = (GameObject)Instantiate (bullet, position, Quaternion.identity);
 				createdBullet.GetComponent<BulletProperties> ().speed = speed;
 				createdBullet.GetComponent<BulletProperties> ().direction = deltaPosition.normalized;
+				Destroy (createdBullet, 5.0f);
 		}
 }
