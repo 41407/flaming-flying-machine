@@ -18,12 +18,15 @@ public class MenuCursor : MonoBehaviour
 		{
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Start")) {
 						cam.GetComponent<MenuCamera> ().state = 1;		
+						
 				}
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Quit")) {
+						
 						Application.Quit ();	
 				}
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Level1")) {
-						Application.LoadLevel (1);	
+						MenuLogic.clickedButton = currentButton;
+						cam.GetComponent<MenuCamera> ().state = -1;
 				}
 		}
 	

@@ -24,5 +24,11 @@ public class MenuCamera : MonoBehaviour
 				if (state == 1) {
 						transform.position = Vector3.Lerp (transform.position, levelSelect, lerpSpeed);
 				}
+				if (state == -1) {
+						transform.position = Vector3.Lerp (transform.position, new Vector3 (transform.position.x, transform.position.y, 10), lerpSpeed);
+				}
+				if (state == -1 && transform.position.z >= 9) {
+						MenuLogic.LoadLevel ();
+				}
 		}
 }

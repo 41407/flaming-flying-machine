@@ -4,6 +4,7 @@ using System.Collections;
 public class MenuLogic : MonoBehaviour
 {
 
+		public static string clickedButton;
 		public GameObject cam;
 		public GameObject mouse;
 		private Vector3 mousePosition;
@@ -20,6 +21,7 @@ public class MenuLogic : MonoBehaviour
 
 				mousePosition = GetWorldPositionOnPlane (Input.mousePosition, 0.0f);
 				mouse.transform.position = mousePosition;
+				print (clickedButton);
 		}
 
 		private Vector3 GetWorldPositionOnPlane (Vector3 screenPosition, float z)
@@ -29,5 +31,13 @@ public class MenuLogic : MonoBehaviour
 				float distance;
 				xy.Raycast (ray, out distance);
 				return ray.GetPoint (distance);
+		}
+		
+		public static void LoadLevel ()
+		{
+				if (clickedButton.Equals ("Button.Level1")) {
+			
+						Application.LoadLevel (1);
+				}
 		}
 }
