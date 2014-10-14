@@ -18,7 +18,7 @@ public class Level1 : MonoBehaviour
 				timer = 0.0f;
 				Spawn.the.StraightMovingPawn (new Vector2 (-2.5f, 30), new Vector2 (-2.5f, 15), 5);
 				Spawn.the.StraightMovingPawn (new Vector2 (2.5f, 30), new Vector2 (2.5f, 15), 5);
-				Spawn.the.AnchoringPawn (new Vector2 (0, 30), new Vector2 (0, 15), 5);
+				Spawn.the.Elite (new Vector2 (0, 30), new Vector2 (0, 15), 5);
 				Spawn.the.AnchoringPawn (new Vector2 (5, 30), new Vector2 (5, 15), 5);
 				Spawn.the.AnchoringPawn (new Vector2 (10, 30), new Vector2 (10, 15), 5);
 				Spawn.the.AnchoringPawn (new Vector2 (-5, 30), new Vector2 (-5, 15), 5);

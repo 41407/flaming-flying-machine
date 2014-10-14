@@ -77,7 +77,6 @@
      <Compile Include="Assets\Scripts\Enemy\Level1BossMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\AnchorToPosition.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\BasicEnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Movement\EliteMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\MovementTowardsPoint.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\OrbitAroundParent.cs" />
      <Compile Include="Assets\Scripts\General\Angle.cs" />

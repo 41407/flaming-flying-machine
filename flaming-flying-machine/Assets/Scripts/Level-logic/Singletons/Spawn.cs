@@ -44,4 +44,12 @@ public class Spawn : MonoBehaviour
 				newPawn.GetComponent<ShootTowardsPlayer> ().fps = 1;
 				newPawn.GetComponent<ShootTowardsPlayer> ().accuracy = 10;
 		}
+
+		public void Elite (Vector2 startPosition, Vector2 anchorPosition, float speed)
+		{
+				GameObject newPawn = (GameObject)Instantiate (elite, startPosition, Quaternion.identity);
+				newPawn.AddComponent<AnchorToPosition> ();
+				newPawn.GetComponent<AnchorToPosition> ().anchorPosition = anchorPosition;
+				newPawn.GetComponent<AnchorToPosition> ().lerpSpeed = 0.01f;
+		}
 }
