@@ -18,8 +18,8 @@ public class CreateRotatorChilds : MonoBehaviour
 						GameObject child = (GameObject)Instantiate (rotatorChild, transform.position, Quaternion.identity);
 						child.GetComponent<OrbitAroundParent> ().index = i;
 						child.GetComponent<OrbitAroundParent> ().parent = gameObject;
-						if (child.GetComponent<EnemyShooting> ()) {
-								child.GetComponent<EnemyShooting> ().player = player;
+						if (child.GetComponent<BurstTowardsPlayer> ()) {
+								child.GetComponent<BurstTowardsPlayer> ().player = player;
 						}
 						childs.Add (child);
 				}

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour
+public class BurstTowardsPlayer : MonoBehaviour
 {
 		public GameObject player;
 		public GameObject projectile;
@@ -11,7 +11,6 @@ public class EnemyShooting : MonoBehaviour
 		private int shotsFired = 0;
 		public float timeBetweenBursts = 0;
 		private float burstTimer = 0;
-		public bool shootsAtPlayer = false;
 
 		void Update ()
 		{

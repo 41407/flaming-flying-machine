@@ -68,8 +68,8 @@
      <Compile Include="Assets\Scripts\Effect\ScaleFlicker.cs" />
      <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBasics.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Firing\BurstTowardsPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\EnemyBasicShooting.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Firing\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\ShootTowardsPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\CreateRotatorChilds.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\EnemyDestruction.cs" />
