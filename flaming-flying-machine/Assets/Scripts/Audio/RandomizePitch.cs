@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AudioPitchRandomization : MonoBehaviour
+public class RandomizePitch : MonoBehaviour
 {
 
 		public float amount = 0;

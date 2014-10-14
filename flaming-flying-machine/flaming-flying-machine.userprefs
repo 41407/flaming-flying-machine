@@ -1,6 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/Firing/EnemyShooting.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/Boss.cs">
     <Files>
       <File FileName="Assets/Scripts/Player/PlayerLogic.cs" Line="146" Column="6" />
       <File FileName="Assets/Scripts/Input/ObjectFollowsMouse.cs" Line="1" Column="1" />
@@ -8,11 +8,22 @@
       <File FileName="Assets/Scripts/Effect/ApplyParentSprite.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Audio/PlayerAudio.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Background/BackgroundGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level-logic/Level-specific/Level1.cs" Line="20" Column="45" />
-      <File FileName="Assets/Scripts/Enemy/General/CreateRotatorChilds.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Level-logic/Singletons/Spawn.cs" Line="53" Column="65" />
+      <File FileName="Assets/Scripts/Level-logic/Level-specific/Level1.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/General/CreateRotatorChilds.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/Level-logic/Singletons/Spawn.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Enemy/Firing/EnemyBasicShooting.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Enemy/Firing/EnemyShooting.cs" Line="13" Column="32" />
+      <File FileName="Assets/Scripts/Enemy/Firing/BurstTowardsPlayer.cs" Line="19" Column="20" />
+      <File FileName="Assets/Scripts/Audio/RandomizePitch.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Audio/Sound.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Bullet/BulletProperties.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Camera/ShakeTheCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Effect/ParitcleLookAt.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Effect/ScaleFlicker.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Firing/ShootTowardsPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Movement/AnchorToPosition.cs" Line="11" Column="20" />
+      <File FileName="Assets/Scripts/Enemy/Movement/MovementTowardsPoint.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Movement/OrbitAroundParent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Boss.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

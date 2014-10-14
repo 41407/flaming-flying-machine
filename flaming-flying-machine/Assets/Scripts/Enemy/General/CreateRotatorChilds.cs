@@ -10,7 +10,6 @@ public class CreateRotatorChilds : MonoBehaviour
 		private int aliveChilds;
 		public bool killIfChildsDie = true;
 		
-		// Use this for initialization
 		void Start ()
 		{
 				childs = new ArrayList ();
@@ -25,7 +24,6 @@ public class CreateRotatorChilds : MonoBehaviour
 				}
 		}
 	
-		// Update is called once per frame
 		void Update ()
 		{
 				if (killIfChildsDie) {
@@ -36,7 +34,6 @@ public class CreateRotatorChilds : MonoBehaviour
 								}
 						}
 						if (aliveChilds < 1) {
-								// delay for slight epicness
 								Destroy (this.gameObject, 0.1f);
 						}
 				}

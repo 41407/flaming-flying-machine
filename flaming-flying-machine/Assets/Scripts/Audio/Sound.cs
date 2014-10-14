@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Sound : MonoBehaviour
 {
+		public bool playOnDestroy = true;
 
 		// Use this for initialization
 		void Start ()
@@ -18,6 +19,8 @@ public class Sound : MonoBehaviour
 
 		void OnDestroy ()
 		{
-				audio.Play ();
+				if (playOnDestroy) {
+						audio.Play ();
+				}
 		}
 }

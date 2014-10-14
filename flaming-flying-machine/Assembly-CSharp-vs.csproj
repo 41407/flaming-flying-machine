@@ -46,28 +46,25 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Audio\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioScript.cs" />
      <Compile Include="Assets\Scripts\Audio\PlayerAudio.cs" />
+     <Compile Include="Assets\Scripts\Audio\RandomizePitch.cs" />
      <Compile Include="Assets\Scripts\Audio\Sound.cs" />
      <Compile Include="Assets\Scripts\Background\BackgroundGenerator.cs" />
      <Compile Include="Assets\Scripts\Background\Squareback.cs" />
      <Compile Include="Assets\Scripts\Background\SquarebackRandomizations.cs" />
-     <Compile Include="Assets\Scripts\Bullet\BasicBullet.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletProperties.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletSpawner.cs" />
-     <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Camera\Shake.cs" />
+     <Compile Include="Assets\Scripts\Camera\ShakeTheCamera.cs" />
      <Compile Include="Assets\Scripts\Debug-Test\CavemanTest.cs" />
      <Compile Include="Assets\Scripts\Debug-Test\PendulumMovement.cs" />
      <Compile Include="Assets\Scripts\Debug-Test\TimerText.cs" />
      <Compile Include="Assets\Scripts\Effect\AlphaRamp.cs" />
      <Compile Include="Assets\Scripts\Effect\ApplyParentSprite.cs" />
      <Compile Include="Assets\Scripts\Effect\ParitcleLookAt.cs" />
-     <Compile Include="Assets\Scripts\Effect\PlayerTrail.cs" />
      <Compile Include="Assets\Scripts\Effect\ScaleFlicker.cs" />
      <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyBasics.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\BurstTowardsPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\EnemyBasicShooting.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\ShootTowardsPlayer.cs" />
@@ -76,7 +73,6 @@
      <Compile Include="Assets\Scripts\Enemy\Level1Boss1.cs" />
      <Compile Include="Assets\Scripts\Enemy\Level1BossMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\AnchorToPosition.cs" />
-     <Compile Include="Assets\Scripts\Enemy\Movement\BasicEnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\MovementTowardsPoint.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\OrbitAroundParent.cs" />
      <Compile Include="Assets\Scripts\General\Angle.cs" />
