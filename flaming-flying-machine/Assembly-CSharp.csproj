@@ -67,12 +67,12 @@
      <Compile Include="Assets\Scripts\Effect\PlayerTrail.cs" />
      <Compile Include="Assets\Scripts\Effect\ScaleFlicker.cs" />
      <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
-     <Compile Include="Assets\Scripts\Enemy\CreateRotatorChilds.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyBasics.cs" />
-     <Compile Include="Assets\Scripts\Enemy\EnemyDestruction.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\EnemyBasicShooting.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\ShootTowardsPlayer.cs" />
+     <Compile Include="Assets\Scripts\Enemy\General\CreateRotatorChilds.cs" />
+     <Compile Include="Assets\Scripts\Enemy\General\EnemyDestruction.cs" />
      <Compile Include="Assets\Scripts\Enemy\Level1Boss1.cs" />
      <Compile Include="Assets\Scripts\Enemy\Level1BossMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy\Movement\AnchorToPosition.cs" />
