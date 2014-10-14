@@ -46,18 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ConstantRotation.cs" />
-     <Compile Include="Assets\EliteMovement.cs" />
-     <Compile Include="Assets\EnemyBasicShooting.cs" />
-     <Compile Include="Assets\Fire.cs" />
-     <Compile Include="Assets\MenuCamera.cs" />
-     <Compile Include="Assets\MenuCursor.cs" />
-     <Compile Include="Assets\MenuGlow.cs" />
-     <Compile Include="Assets\MenuLogic.cs" />
-     <Compile Include="Assets\MenuMouseOver.cs" />
-     <Compile Include="Assets\PlayerBulletDestruction.cs" />
-     <Compile Include="Assets\Scripts\AnchorToPosition.cs" />
-     <Compile Include="Assets\Scripts\Angle.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioPitchRandomization.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioScript.cs" />
      <Compile Include="Assets\Scripts\Audio\PlayerAudio.cs" />
@@ -78,27 +66,37 @@
      <Compile Include="Assets\Scripts\Effect\ParitcleLookAt.cs" />
      <Compile Include="Assets\Scripts\Effect\PlayerTrail.cs" />
      <Compile Include="Assets\Scripts\Effect\ScaleFlicker.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\BasicEnemyMovement.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\Boss.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\CreateRotatorChilds.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\EnemyBasics.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\EnemyDestruction.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\EnemyShooting.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\Level1Boss1.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\Level1BossMovement.cs" />
-     <Compile Include="Assets\Scripts\EnemyScripts\OrbitAroundParent.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Boss.cs" />
+     <Compile Include="Assets\Scripts\Enemy\CreateRotatorChilds.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyBasics.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyDestruction.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Firing\EnemyBasicShooting.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Firing\EnemyShooting.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Firing\ShootTowardsPlayer.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Level1Boss1.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Level1BossMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Movement\AnchorToPosition.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Movement\BasicEnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Movement\EliteMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Movement\MovementTowardsPoint.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Movement\OrbitAroundParent.cs" />
+     <Compile Include="Assets\Scripts\General\Angle.cs" />
+     <Compile Include="Assets\Scripts\General\ConstantRotation.cs" />
+     <Compile Include="Assets\Scripts\General\LookAtObject.cs" />
+     <Compile Include="Assets\Scripts\General\Rotate.cs" />
      <Compile Include="Assets\Scripts\Input\ObjectFollowsMouse.cs" />
      <Compile Include="Assets\Scripts\Input\UserInputMovement.cs" />
-     <Compile Include="Assets\Scripts\Level\LevelScript.cs" />
-     <Compile Include="Assets\Scripts\Level\Metronome.cs" />
-     <Compile Include="Assets\Scripts\Level\SpawnEnemy.cs" />
-     <Compile Include="Assets\Scripts\LookAtObject.cs" />
-     <Compile Include="Assets\Scripts\MovementTowardsPoint.cs" />
+     <Compile Include="Assets\Scripts\Level-logic\Level-specific\Level1.cs" />
+     <Compile Include="Assets\Scripts\Level-logic\Singletons\Fire.cs" />
+     <Compile Include="Assets\Scripts\Level-logic\Singletons\Metronome.cs" />
+     <Compile Include="Assets\Scripts\Level-logic\Singletons\Spawn.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuCamera.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuCursor.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuGlow.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuLogic.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuMouseOver.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerBulletDestruction.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerLogic.cs" />
-     <Compile Include="Assets\Scripts\Rotate.cs" />
-     <Compile Include="Assets\Scripts\ShootTowardsPlayer.cs" />
-     <Compile Include="Assets\Spawn.cs" />
-     <None Include="Assets\Levels\1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

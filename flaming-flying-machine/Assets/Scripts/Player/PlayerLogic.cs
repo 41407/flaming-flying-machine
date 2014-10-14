@@ -143,7 +143,7 @@ public class PlayerLogic : MonoBehaviour
 		{
 				angle += Random.Range (-angleRandomization, angleRandomization);
 				GameObject newBullet = (GameObject)Instantiate (bullet, position + Vector3.back, Quaternion.AngleAxis (180 + angle, Vector3.back));
-				Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
+			//	Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 				newBullet.GetComponent<BulletProperties> ().speed = speed + Random.Range (-speedFlatRandomization, speedFlatRandomization);
 				newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
 				Destroy (newBullet, 1.0f);

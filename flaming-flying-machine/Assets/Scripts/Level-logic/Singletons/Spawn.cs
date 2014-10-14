@@ -11,7 +11,7 @@ public class Spawn : MonoBehaviour
 		private static Spawn _instance;
 	
 		//This is the public reference that other classes will use
-		public static Spawn instance {
+		public static Spawn the {
 				get {
 						//If _instance hasn't been set yet, we grab it from the scene!
 						//This will only happen the first time this reference is used.
