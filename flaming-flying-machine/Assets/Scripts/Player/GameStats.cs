@@ -77,7 +77,7 @@ public class GameStats : MonoBehaviour
 						}
 				} else {
 						print ("PlayerPrefs didn't have score for Level " + gameLevel + ". Creating entry.");
-						PlayerPrefs.SetInt ("Level " + gameLevel, score + " score");
+						PlayerPrefs.SetInt ("Level " + gameLevel + " score", score);
 				}
 
 				if (PlayerPrefs.HasKey ("Level " + gameLevel + " time")) {
@@ -90,7 +90,7 @@ public class GameStats : MonoBehaviour
 						}
 				} else {
 						print ("PlayerPrefs didn't have time for Level " + gameLevel + ". Creating entry.");
-						PlayerPrefs.SetInt ("Level " + gameLevel, score + " score");
+						PlayerPrefs.SetFloat ("Level " + gameLevel + " time", time);
 				}
 		}
 
