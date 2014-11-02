@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour
 
 		public GameObject pawn;
 		public GameObject elite;
+		public GameObject tank;
 
 		//Here is a private reference only this class can access
 		private static Spawn _instance;
@@ -23,33 +24,42 @@ public class Spawn : MonoBehaviour
 
 		public void StraightMovingPawn (Vector2 startPosition, Vector2 direction, float speed)
 		{
-				GameObject newPawn = (GameObject)Instantiate (pawn, startPosition, Quaternion.identity);
-				newPawn.AddComponent<MovementTowardsPoint> ();
-				newPawn.GetComponent<MovementTowardsPoint> ().movement = (direction - startPosition).normalized;
-				newPawn.GetComponent<MovementTowardsPoint> ().speed = speed;
-				newPawn.AddComponent<ShootTowardsPlayer> ();
-				newPawn.GetComponent<ShootTowardsPlayer> ().speed = 10;
-				newPawn.GetComponent<ShootTowardsPlayer> ().fps = 1;
-				newPawn.GetComponent<ShootTowardsPlayer> ().accuracy = 10;
+				GameObject mob = (GameObject)Instantiate (pawn, startPosition, Quaternion.identity);
+				mob.AddComponent<MovementTowardsPoint> ();
+				mob.GetComponent<MovementTowardsPoint> ().movement = (direction - startPosition).normalized;
+				mob.GetComponent<MovementTowardsPoint> ().speed = speed;
+				mob.AddComponent<ShootTowardsPlayer> ();
+				mob.GetComponent<ShootTowardsPlayer> ().speed = 10;
+				mob.GetComponent<ShootTowardsPlayer> ().fps = 1;
+				mob.GetComponent<ShootTowardsPlayer> ().accuracy = 10;
 		}
 
 		public void AnchoringPawn (Vector2 startPosition, Vector2 anchorPosition, float speed)
 		{
-				GameObject newPawn = (GameObject)Instantiate (pawn, startPosition, Quaternion.identity);
-				newPawn.AddComponent<AnchorToPosition> ();
-				newPawn.GetComponent<AnchorToPosition> ().anchorPosition = anchorPosition;
-				newPawn.GetComponent<AnchorToPosition> ().lerpSpeed = 0.025f;
-				newPawn.AddComponent<ShootTowardsPlayer> ();
-				newPawn.GetComponent<ShootTowardsPlayer> ().speed = 10;
-				newPawn.GetComponent<ShootTowardsPlayer> ().fps = 1;
-				newPawn.GetComponent<ShootTowardsPlayer> ().accuracy = 10;
+				GameObject mob = (GameObject)Instantiate (pawn, startPosition, Quaternion.identity);
+				mob.AddComponent<AnchorToPosition> ();
+				mob.GetComponent<AnchorToPosition> ().anchorPosition = anchorPosition;
+				mob.GetComponent<AnchorToPosition> ().lerpSpeed = 0.025f;
+				mob.AddComponent<ShootTowardsPlayer> ();
+				mob.GetComponent<ShootTowardsPlayer> ().speed = 10;
+				mob.GetComponent<ShootTowardsPlayer> ().fps = 1;
+				mob.GetComponent<ShootTowardsPlayer> ().accuracy = 10;
+		}
+
+		public void AnchoringTank (Vector2 startPosition, Vector2 anchorPosition, float speed)
+		{
+				GameObject mob = (GameObject)Instantiate (tank, startPosition, Quaternion.identity);
+				mob.AddComponent<AnchorToPosition> ();
+				mob.GetComponent<AnchorToPosition> ().anchorPosition = anchorPosition;
+				mob.GetComponent<AnchorToPosition> ().lerpSpeed = 0.01f;
+				mob.AddComponent<TankShotPattern> ();
 		}
 
 		public void Elite (Vector2 startPosition, Vector2 anchorPosition, float speed)
 		{
-				GameObject newPawn = (GameObject)Instantiate (elite, startPosition, Quaternion.identity);
-				newPawn.AddComponent<AnchorToPosition> ();
-				newPawn.GetComponent<AnchorToPosition> ().anchorPosition = anchorPosition;
-				newPawn.GetComponent<AnchorToPosition> ().lerpSpeed = 0.01f;
+				GameObject mob = (GameObject)Instantiate (elite, startPosition, Quaternion.identity);
+				mob.AddComponent<AnchorToPosition> ();
+				mob.GetComponent<AnchorToPosition> ().anchorPosition = anchorPosition;
+				mob.GetComponent<AnchorToPosition> ().lerpSpeed = 0.01f;
 		}
 }

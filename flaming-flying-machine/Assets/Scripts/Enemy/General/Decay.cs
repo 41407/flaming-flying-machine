@@ -8,4 +8,11 @@ public class Decay : MonoBehaviour
 		{
 				Destroy (gameObject);
 		}
+
+		void Update ()
+		{
+				if (transform.position.x < -16 || transform.position.x > 16) {
+						Destroy (gameObject);
+				}
+		}
 }

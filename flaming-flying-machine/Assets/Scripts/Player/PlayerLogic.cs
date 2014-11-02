@@ -66,23 +66,23 @@ public class PlayerLogic : MonoBehaviour
 
 		void CheckLevel ()
 		{
-				if (level == 1 && xp >= 20) {
+				if (level == 1 && xp >= 60) {
 						level++;
 						xp = 0;
 						levelUpParticle.particleSystem.Play ();
 						
 				}
-				if (level == 2 && xp >= 40) {
+				if (level == 2 && xp >= 120) {
 						level++;
 						xp = 0;
 						levelUpParticle.particleSystem.Play ();
 				}
-				if (level == 3 && xp >= 60) {
+				if (level == 3 && xp >= 240) {
 						level++;
 						xp = 0;
 						levelUpParticle.particleSystem.Play ();
 				}
-				if (level == 3 && xp >= 60) {
+				if (level == 3 && xp >= 480) {
 						level++;
 						xp = 0;
 						levelUpParticle.particleSystem.Play ();
