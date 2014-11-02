@@ -7,6 +7,16 @@ public class GameStats : MonoBehaviour
 		static int playerLevel;
 		static int gameLevel;
 		static float time;
+		static bool newHighScore = false;
+		static bool newRecordTime = false;
+	
+		public static void reset ()
+		{
+				score = 0;
+				time = 0;
+				newHighScore = false;
+				newRecordTime = false;
+		}
 
 	#region time
 	
@@ -19,7 +29,7 @@ public class GameStats : MonoBehaviour
 		{
 				return time;
 		}
-	
+
 	#endregion
 
 	#region level
@@ -37,12 +47,6 @@ public class GameStats : MonoBehaviour
 	#endregion
 
 	#region score
-
-		public static void resetScore ()
-		{
-				score = 0;
-				time = 0;
-		}
 
 		public static int addScore (int amount)
 		{
@@ -65,32 +69,43 @@ public class GameStats : MonoBehaviour
 				playerLevel = level;
 		}
 
-		public static void checkHighScore ()
+	#endregion
+
+	#region highscores
+
+		public static bool highScore ()
+		{
+				return newHighScore;
+		}
+
+		public static bool recordTime ()
+		{
+				return newRecordTime;
+		}
+
+		public static void checkRecord ()
 		{
 				if (PlayerPrefs.HasKey ("Level " + gameLevel + " score")) {
-						print ("PlayerPrefs did have score for Level " + gameLevel + ". Comparing scores.");
 						if (PlayerPrefs.GetInt ("Level " + gameLevel + " score") < score) {
 								PlayerPrefs.SetInt ("Level " + gameLevel + " score", score);
-								print ("Score was higher than before. High score updated.");
+								newHighScore = true;
 						} else {
-								print ("Score was lower than before. High score unchanged.");
+								newHighScore = false;
 						}
 				} else {
-						print ("PlayerPrefs didn't have score for Level " + gameLevel + ". Creating entry.");
 						PlayerPrefs.SetInt ("Level " + gameLevel + " score", score);
+						newHighScore = true;
 				}
-
 				if (PlayerPrefs.HasKey ("Level " + gameLevel + " time")) {
-						print ("PlayerPrefs did have time for Level " + gameLevel + ". Comparing times.");
 						if (PlayerPrefs.GetFloat ("Level " + gameLevel + " time") > time) {
 								PlayerPrefs.SetFloat ("Level " + gameLevel + " time", time);
-								print ("Time was faster than before. Record time updated.");
+								newRecordTime = true;
 						} else {
-								print ("Time was slower than before. Record time unchanged.");
+								newRecordTime = false;
 						}
 				} else {
-						print ("PlayerPrefs didn't have time for Level " + gameLevel + ". Creating entry.");
 						PlayerPrefs.SetFloat ("Level " + gameLevel + " time", time);
+						newRecordTime = true;
 				}
 		}
 

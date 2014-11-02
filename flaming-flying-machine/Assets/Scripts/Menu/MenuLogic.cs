@@ -11,10 +11,13 @@ public class MenuLogic : MonoBehaviour
 
 		void Update ()
 		{
-
 				if (mouse) {
 						mousePosition = GetWorldPositionOnPlane (Input.mousePosition, 0.0f);
 						mouse.transform.position = mousePosition;
+				}
+				if (Input.GetKeyDown (KeyCode.R)) {
+						print ("All records deleted! :)");
+						PlayerPrefs.DeleteAll ();
 				}
 		}
 

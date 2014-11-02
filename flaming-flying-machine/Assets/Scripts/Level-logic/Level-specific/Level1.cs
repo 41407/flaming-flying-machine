@@ -18,21 +18,20 @@ public class Level1 : MonoBehaviour
 		{
 				stage = 0;
 				totalTime = 0;
-				GameStats.resetScore ();
+				GameStats.reset ();
 		}
 
 		void Start ()
 		{
 				stage = 0;
 				totalTime = 0;
-				GameStats.resetScore ();
+				GameStats.reset ();
 		}
 
 		// Update is called once per frame
 		void Update ()
 		{
 				totalTime += Time.deltaTime;
-				print (GameStats.getScore ());
 				if (aliveEnemies <= 0) {
 						stage++;
 						timer = 0;
@@ -79,7 +78,7 @@ public class Level1 : MonoBehaviour
 						}
 				} else {
 						GameStats.setTime (totalTime);
-						GameStats.checkHighScore ();
+						GameStats.checkRecord ();
 						Application.LoadLevel ("Level Passed");
 						
 				}

@@ -46,8 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Decay.cs" />
-     <Compile Include="Assets\ScoreDisplay.cs" />
+     <Compile Include="Assets\RecordWobble.cs" />
      <Compile Include="Assets\Scripts\Audio\AudioScript.cs" />
      <Compile Include="Assets\Scripts\Audio\PlayerAudio.cs" />
      <Compile Include="Assets\Scripts\Audio\RandomizePitch.cs" />
@@ -71,6 +70,7 @@
      <Compile Include="Assets\Scripts\Enemy\Firing\EnemyBasicShooting.cs" />
      <Compile Include="Assets\Scripts\Enemy\Firing\ShootTowardsPlayer.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\CreateRotatorChilds.cs" />
+     <Compile Include="Assets\Scripts\Enemy\General\Decay.cs" />
      <Compile Include="Assets\Scripts\Enemy\General\EnemyDestruction.cs" />
      <Compile Include="Assets\Scripts\Enemy\Level1Boss1.cs" />
      <Compile Include="Assets\Scripts\Enemy\Level1BossMovement.cs" />
@@ -87,15 +87,19 @@
      <Compile Include="Assets\Scripts\Level-logic\Singletons\Fire.cs" />
      <Compile Include="Assets\Scripts\Level-logic\Singletons\Metronome.cs" />
      <Compile Include="Assets\Scripts\Level-logic\Singletons\Spawn.cs" />
+     <Compile Include="Assets\Scripts\Menu\HighScore.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuCamera.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuCursor.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuGlow.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuLogic.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuMouseOver.cs" />
+     <Compile Include="Assets\Scripts\Menu\RecordTime.cs" />
+     <Compile Include="Assets\Scripts\Menu\ScoreDisplay.cs" />
+     <Compile Include="Assets\Scripts\Menu\TimeDisplay.cs" />
      <Compile Include="Assets\Scripts\Player\GameStats.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerBulletDestruction.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerLogic.cs" />
-     <Compile Include="Assets\TimeDisplay.cs" />
+     <Compile Include="Assets\TimeRecordWobble.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
