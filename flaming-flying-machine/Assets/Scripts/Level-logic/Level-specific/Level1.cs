@@ -79,6 +79,7 @@ public class Level1 : MonoBehaviour
 						}
 				} else {
 						GameStats.setTime (totalTime);
+						GameStats.checkHighScore ();
 						Application.LoadLevel ("Level Passed");
 						
 				}
