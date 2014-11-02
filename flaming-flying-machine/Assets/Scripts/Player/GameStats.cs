@@ -5,6 +5,7 @@ public class GameStats // : MonoBehaviour
 {
 
 		static int score;
+		static int playerLevel;
 
 		public static int resetScore ()
 		{
@@ -19,11 +20,16 @@ public class GameStats // : MonoBehaviour
 		
 		public static int addScore ()
 		{
-				return addScore (1);
+				return addScore (playerLevel);
 		}
 
 		public static int getScore ()
 		{
 				return score;
+		}
+
+		public static void setPlayerLevel (int level)
+		{
+				playerLevel = level;
 		}
 }

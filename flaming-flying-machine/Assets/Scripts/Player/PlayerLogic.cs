@@ -87,6 +87,7 @@ public class PlayerLogic : MonoBehaviour
 						xp = 0;
 						levelUpParticle.particleSystem.Play ();
 				}
+				GameStats.setPlayerLevel (level);
 		}
 
 		void LevelDown ()
@@ -96,8 +97,8 @@ public class PlayerLogic : MonoBehaviour
 				if (level == 0) {
 						Destroy (gameObject);
 				} else {
-			
 						MakeInvulnerable ();
+						CheckLevel ();
 				}
 		}
 
