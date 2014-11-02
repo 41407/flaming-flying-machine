@@ -35,9 +35,8 @@ public class Level1 : MonoBehaviour
 				}
 				UpdateStage (stage);
 				if (!player) {
-						Application.LoadLevel (0);
+						Application.LoadLevel ("Game Over");
 				}
-				print (GameStats.getScore ());
 		}
 
 		void UpdateStage (int stage)

@@ -21,7 +21,6 @@ public class MenuCursor : MonoBehaviour
 						
 				}
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Quit")) {
-						
 						Application.Quit ();	
 				}
 				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Level1")) {
@@ -29,6 +28,17 @@ public class MenuCursor : MonoBehaviour
 						cam.GetComponent<MenuCamera> ().state = -1;
 						Destroy (gameObject, 0.01f);
 				}
+				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.MainMenu")) {
+						MenuLogic.clickedButton = currentButton;
+						cam.GetComponent<MenuCamera> ().state = -1;
+						Destroy (gameObject, 0.01f);
+				}
+				if (Input.GetMouseButtonDown (0) && currentButton.Equals ("Button.Retry")) {
+						MenuLogic.clickedButton = currentButton;
+						cam.GetComponent<MenuCamera> ().state = -1;
+						Destroy (gameObject, 0.01f);
+				}
+
 		}
 	
 		void OnTriggerEnter2D (Collider2D col)
