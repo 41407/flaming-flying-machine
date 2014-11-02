@@ -31,6 +31,7 @@ public class Level1 : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				print (GameStats.getScore());
 				if (aliveEnemies <= 0) {
 						stage++;
 						timer = 0;
@@ -75,11 +76,10 @@ public class Level1 : MonoBehaviour
 								Spawn.the.Elite (new Vector2 (0, 30), new Vector2 (-10, 15), 5);
 								stageWave++;
 						}
-				} else if (stage == 4) {
-						if (timer > 2) {
-								GameStats.setTime (totalTime);
-								Application.LoadLevel ("Level Passed");
-						}
+				} else {
+						GameStats.setTime (totalTime);
+						Application.LoadLevel ("Level Passed");
+						
 				}
 				timer += Time.deltaTime;
 		}

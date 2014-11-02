@@ -13,6 +13,6 @@ public class ScoreDisplay : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				GetComponent<TextMesh> ().text = "" + GameStats.getTime ();
+				GetComponent<TextMesh> ().text = "" + GameStats.getScore ();
 		}
 }

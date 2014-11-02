@@ -20,6 +20,7 @@ public class EnemyDestruction : MonoBehaviour
 		{
 				if (health <= 0) {	
 						PlayerLogic.xpUp (maxHealth);
+						GameStats.addScore ();
 						Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 3.0f);
 						Destroy (gameObject);
 				}
@@ -42,7 +43,6 @@ public class EnemyDestruction : MonoBehaviour
 		
 		void OnDestroy ()
 		{
-				GameStats.addScore ();
 				Level1.enemyDied ();
 		}
 }
