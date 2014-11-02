@@ -8,9 +8,11 @@ public class EnemyDestruction : MonoBehaviour
 		public int health;
 		private int maxHealth;
 		public bool destroysBulletsOnImpact;
+		public bool destroyOnExit = true;
 
 		void Start ()
 		{
+				Level1.enemySpawned ();
 				maxHealth = health;
 		}
 
@@ -19,6 +21,9 @@ public class EnemyDestruction : MonoBehaviour
 				if (health <= 0) {	
 						PlayerLogic.xpUp (maxHealth);
 						Destroy (Instantiate (explosion, transform.position, Quaternion.identity), 3.0f);
+						Destroy (gameObject);
+				}
+				if (destroyOnExit && transform.position.y < -2.0f) {
 						Destroy (gameObject);
 				}
 		}
@@ -33,5 +38,10 @@ public class EnemyDestruction : MonoBehaviour
 								Destroy (coll.gameObject);
 						}
 				}
+		}
+		
+		void OnDestroy ()
+		{
+				Level1.enemyDied ();
 		}
 }

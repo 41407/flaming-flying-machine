@@ -36,7 +36,11 @@ public class Fire : MonoBehaviour
 	
 		public void Player (Vector2 position, float speed)
 		{
-				Shoot (position, (Vector2)player.transform.position - position, speed);
+				if (player) {
+						Shoot (position, (Vector2)player.transform.position - position, speed);
+				} else {
+						Shoot (position, Quaternion.identity, speed);
+				}
 		}
 
 		public void Player (Vector2 position, float speed, float accuracy)
