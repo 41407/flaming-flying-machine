@@ -6,6 +6,19 @@ public class GameStats // : MonoBehaviour
 
 		static int score;
 		static int playerLevel;
+		static int gameLevel;
+
+		public static void setGameLevel (int level)
+		{
+				gameLevel = level;
+		}
+
+		public static int getGameLevel ()
+		{
+				return gameLevel;
+		}
+
+	#region score
 
 		public static int resetScore ()
 		{
@@ -32,4 +45,6 @@ public class GameStats // : MonoBehaviour
 		{
 				playerLevel = level;
 		}
+
+	#endregion
 }

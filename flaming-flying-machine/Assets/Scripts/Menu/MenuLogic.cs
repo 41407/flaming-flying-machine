@@ -30,9 +30,11 @@ public class MenuLogic : MonoBehaviour
 		public static void LoadLevel ()
 		{
 				if (clickedButton.Equals ("Button.Level1")) {
-						Application.LoadLevel (1);
+						GameStats.setGameLevel (1);
+						Application.LoadLevel (GameStats.getGameLevel ());
 				} else {
-						Application.LoadLevel (0);
+						GameStats.setGameLevel (0);
+						Application.LoadLevel (GameStats.getGameLevel ());
 				}
 		}
 }
