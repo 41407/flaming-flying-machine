@@ -7,6 +7,23 @@ public class GameStats // : MonoBehaviour
 		static int score;
 		static int playerLevel;
 		static int gameLevel;
+		static float time;
+
+	#region time
+	
+		public static void setTime (float gametime)
+		{
+				time = gametime;
+		}
+	
+		public static float getTime ()
+		{
+				return time;
+		}
+	
+	#endregion
+
+	#region level
 
 		public static void setGameLevel (int level)
 		{
@@ -18,11 +35,14 @@ public class GameStats // : MonoBehaviour
 				return gameLevel;
 		}
 
+	#endregion
+
 	#region score
 
-		public static int resetScore ()
+		public static void resetScore ()
 		{
-				return score = 0;
+				score = 0;
+				time = 0;
 		}
 
 		public static int addScore (int amount)

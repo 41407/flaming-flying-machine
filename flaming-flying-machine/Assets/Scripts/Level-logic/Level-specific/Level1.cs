@@ -11,17 +11,20 @@ public class Level1 : MonoBehaviour
 		public Camera levelCamera;
 		public static int aliveEnemies = 0;
 		private float timer;
+		private float totalTime;
 		private int stageWave;
 
 		void Awake ()
 		{
 				stage = 0;
+				totalTime = 0;
 				GameStats.resetScore ();
 		}
 
 		void Start ()
 		{
 				stage = 0;
+				totalTime = 0;
 				GameStats.resetScore ();
 		}
 
@@ -71,6 +74,11 @@ public class Level1 : MonoBehaviour
 						if (timer > 2 && stageWave == 2) {
 								Spawn.the.Elite (new Vector2 (0, 30), new Vector2 (-10, 15), 5);
 								stageWave++;
+						}
+				} else if (stage == 4) {
+						if (timer > 2) {
+								GameStats.setTime (totalTime);
+								Application.LoadLevel ("Level Passed");
 						}
 				}
 				timer += Time.deltaTime;

@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\Player\GameStats.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerBulletDestruction.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerLogic.cs" />
+     <Compile Include="Assets\TimeDisplay.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
