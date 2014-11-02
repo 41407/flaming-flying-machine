@@ -31,7 +31,8 @@ public class Level1 : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				print (GameStats.getScore());
+				totalTime += Time.deltaTime;
+				print (GameStats.getScore ());
 				if (aliveEnemies <= 0) {
 						stage++;
 						timer = 0;
