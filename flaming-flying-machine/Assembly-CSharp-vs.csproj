@@ -90,6 +90,7 @@
      <Compile Include="Assets\Scripts\Menu\MenuGlow.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuLogic.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuMouseOver.cs" />
+     <Compile Include="Assets\Scripts\Player\GameStats.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerBulletDestruction.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerLogic.cs" />
   </ItemGroup>

@@ -16,17 +16,18 @@ public class Level1 : MonoBehaviour
 		void Awake ()
 		{
 				stage = 0;
+				GameStats.resetScore ();
 		}
 
 		void Start ()
 		{
 				stage = 0;
+				GameStats.resetScore ();
 		}
 
 		// Update is called once per frame
 		void Update ()
 		{
-				print (aliveEnemies);
 				if (aliveEnemies <= 0) {
 						stage++;
 						timer = 0;
@@ -36,6 +37,7 @@ public class Level1 : MonoBehaviour
 				if (!player) {
 						Application.LoadLevel (0);
 				}
+				print (GameStats.getScore ());
 		}
 
 		void UpdateStage (int stage)

@@ -47,7 +47,7 @@ public class PlayerLogic : MonoBehaviour
 				}
 
 				if (Input.GetMouseButtonDown (1)) {
-						invulnerabilityTimer = invulnerabilityPeriod;
+						MakeInvulnerable ();
 				}
 		}
 
@@ -89,6 +89,18 @@ public class PlayerLogic : MonoBehaviour
 				}
 		}
 
+		void LevelDown ()
+		{
+				level--;
+				xp = 0;
+				if (level == 0) {
+						Destroy (gameObject);
+				} else {
+			
+						MakeInvulnerable ();
+				}
+		}
+
 	#endregion
 
 		void FiringLogic ()
@@ -120,6 +132,11 @@ public class PlayerLogic : MonoBehaviour
 				timeSinceLastShot += Time.deltaTime;
 		}
 
+		void MakeInvulnerable ()
+		{
+				invulnerabilityTimer = invulnerabilityPeriod;
+		}
+
 		void Invulnerability ()
 		{
 				invulnerabilityTimer -= Time.deltaTime;
@@ -135,7 +152,7 @@ public class PlayerLogic : MonoBehaviour
 		void OnTriggerEnter2D (Collider2D coll)
 		{
 				if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "EnemyBullet" && invulnerabilityTimer <= 0) {
-						Destroy (gameObject);		
+						LevelDown ();		
 				}
 		}
 
@@ -143,7 +160,7 @@ public class PlayerLogic : MonoBehaviour
 		{
 				angle += Random.Range (-angleRandomization, angleRandomization);
 				GameObject newBullet = (GameObject)Instantiate (bullet, position + Vector3.back, Quaternion.AngleAxis (180 + angle, Vector3.back));
-			//	Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
+				//	Physics2D.IgnoreCollision (newBullet.collider2D, gameObject.collider2D);
 				newBullet.GetComponent<BulletProperties> ().speed = speed + Random.Range (-speedFlatRandomization, speedFlatRandomization);
 				newBullet.GetComponent<BulletProperties> ().direction = Vector3.down;
 				Destroy (newBullet, 1.0f);

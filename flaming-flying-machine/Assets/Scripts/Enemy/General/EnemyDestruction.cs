@@ -42,6 +42,7 @@ public class EnemyDestruction : MonoBehaviour
 		
 		void OnDestroy ()
 		{
+				GameStats.addScore ();
 				Level1.enemyDied ();
 		}
 }

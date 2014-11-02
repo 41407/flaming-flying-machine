@@ -9,13 +9,6 @@ public class MenuLogic : MonoBehaviour
 		public GameObject mouse;
 		private Vector3 mousePosition;
 
-		// Use this for initialization
-		void Start ()
-		{
-	
-		}
-	
-		// Update is called once per frame
 		void Update ()
 		{
 
