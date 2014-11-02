@@ -125,6 +125,26 @@ public class Level1 : MonoBehaviour
 								stageWave++;
 								stagecomplete = true;
 						}
+				} else if (stage == 4) {
+						if (timer > 1f && stageWave == 0) {
+								Spawn.the.Elite (new Vector2 (0, 35), new Vector2 (0, 15));
+								stageWave++;
+								stagecomplete = true;
+						}
+				} else if (stage == 5) {
+						if (timer > 1f && stageWave == 0) {
+								Spawn.the.Elite (new Vector2 (0, 35), new Vector2 (0, 15));
+								stageWave++;
+						}
+						if (timer > 1.5f && stageWave == 1) {
+								Spawn.the.Elite (new Vector2 (-10, 35), new Vector2 (-10, 15));
+								stageWave++;
+						}
+						if (timer > 2f && stageWave == 2) {
+								Spawn.the.Elite (new Vector2 (10, 35), new Vector2 (10, 15));
+								stageWave++;
+								stagecomplete = true;
+						}
 				} else {
 						GameStats.setTime (totalTime);
 						GameStats.checkRecord ();

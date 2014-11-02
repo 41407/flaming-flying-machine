@@ -46,7 +46,7 @@ public class Spawn : MonoBehaviour
 				mob.GetComponent<ShootTowardsPlayer> ().accuracy = 10;
 		}
 
-		public void AnchoringTank (Vector2 startPosition, Vector2 anchorPosition, float speed)
+		public void AnchoringTank (Vector2 startPosition, Vector2 anchorPosition)
 		{
 				GameObject mob = (GameObject)Instantiate (tank, startPosition, Quaternion.identity);
 				mob.AddComponent<AnchorToPosition> ();
@@ -55,7 +55,7 @@ public class Spawn : MonoBehaviour
 				mob.AddComponent<TankShotPattern> ();
 		}
 
-		public void Elite (Vector2 startPosition, Vector2 anchorPosition, float speed)
+		public void Elite (Vector2 startPosition, Vector2 anchorPosition)
 		{
 				GameObject mob = (GameObject)Instantiate (elite, startPosition, Quaternion.identity);
 				mob.AddComponent<AnchorToPosition> ();

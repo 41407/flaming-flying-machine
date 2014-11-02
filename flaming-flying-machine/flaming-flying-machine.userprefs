@@ -1,10 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TankShotPattern.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/General/EnemyDestruction.cs">
     <Files>
-      <File FileName="Assets/Scripts/Level-logic/Level-specific/Level1.cs" Line="50" Column="28" />
-      <File FileName="Assets/Scripts/Level-logic/Singletons/Spawn.cs" Line="55" Column="40" />
-      <File FileName="Assets/TankShotPattern.cs" Line="6" Column="38" />
+      <File FileName="Assets/Scripts/Level-logic/Level-specific/Level1.cs" Line="143" Column="20" />
+      <File FileName="Assets/Scripts/Level-logic/Singletons/Spawn.cs" Line="49" Column="75" />
+      <File FileName="Assets/Scripts/Enemy/Firing/TankShotPattern.cs" Line="7" Column="35" />
+      <File FileName="Assets/Scripts/Enemy/Movement/MovementTowardsPoint.cs" Line="9" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/General/Decay.cs" Line="15" Column="25" />
+      <File FileName="Assets/Scripts/Player/PlayerLogic.cs" Line="85" Column="31" />
+      <File FileName="Assets/Scripts/Enemy/General/EnemyDestruction.cs" Line="37" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
